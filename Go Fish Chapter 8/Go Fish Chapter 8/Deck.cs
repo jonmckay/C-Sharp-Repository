@@ -16,7 +16,7 @@ namespace Go_Fish_Chapter_8
             cards = new List<Card>();
             for (int suit = 0; suit <= 3; suit++)
             {
-                for (int value = 1; value <= 14; value++)
+                for (int value = 1; value <= 13; value++)
                 {
                     cards.Add(new Card((Suits)suit, (Values)value));
                 }
@@ -79,7 +79,7 @@ namespace Go_Fish_Chapter_8
         public Deck PullOutValues(Values value)
         {
             Deck deckToReturn = new Deck(new Card[] { });
-            for (int i = cards.Count - 1; i >= 0; i++)
+            for (int i = cards.Count - 1; i >= 0; i--)
             {
                 if (cards[i].Value == value)
                 {

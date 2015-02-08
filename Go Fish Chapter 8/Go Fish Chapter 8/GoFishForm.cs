@@ -26,7 +26,7 @@ namespace Go_Fish_Chapter_8
                 MessageBox.Show("Please enter your name", "Can't start the game yet");
                 return;
             }
-             game = new Game(tbPlayerName.Text, new List<string> { "Joe", "Bob" }, textProgress.Text);
+             game = new Game(tbPlayerName.Text, new List<string> { "Joe", "Bob" }, textProgress);
              btnStartGame.Enabled = false;
              tbPlayerName.Enabled = false;
              btnAskForCard.Enabled = true;

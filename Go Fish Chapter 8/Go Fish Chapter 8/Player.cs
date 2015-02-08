@@ -26,20 +26,21 @@ namespace Go_Fish_Chapter_8
         /// <param name="textBoxOnForm"></param>
         public Player(String name, Random random, TextBox textBoxOnForm)
         {
+            this.cards = new Deck(new Card[] { });
             this.name = name;
             this.random = random;
             this.textBoxOnForm = textBoxOnForm;
-            this.textBoxOnForm.Text += this.Name + " has just joined the game" + Environment.NewLine; 
+            this.textBoxOnForm.Text += this.Name + " has just joined the game" + Environment.NewLine;
         }
 
         /// <summary>
         /// This method gets a random value-but it has to be a value that's in the deck!
         /// </summary>
         /// <returns></returns>
-        public Values GetRandomValue() 
+        public Values GetRandomValue()
         {
-            int valueToGet = random.Next();
-            //This is a test to see if github is working
+            Card randomCard = cards.Peek(random.Next(cards.Count));
+            return randomCard.Value;
         }
 
         /// <summary>
@@ -51,10 +52,9 @@ namespace Go_Fish_Chapter_8
         /// <returns></returns>
         public Deck DoYouHaveAny(Values value)
         {
-            if (cards.ContainsValue(value))
-            {
-                
-            }
+            Deck cardValues = cards.PullOutValues(value);
+            textBoxOnForm.Text += Name + " has " + cardValues.Count + " " + Card.Plural(value) + Environment.NewLine;
+            return cardValues;
         }
 
         /// <summary>
@@ -66,7 +66,8 @@ namespace Go_Fish_Chapter_8
         /// <param name="stock"></param>
         public void AskForACard(List<Player> players, int myIndex, Deck stock)
         {
-            
+            Values randomValue = GetRandomValue();
+            AskForACard(players, myIndex, stock, randomValue);
         }
 
         /// <summary>
@@ -83,8 +84,27 @@ namespace Go_Fish_Chapter_8
         /// <param name="stock"></param>
         /// <param name="value"></param>
         public void AskForACard(List<Player> players, int myIndex, Deck stock, Values value)
-        {
-            
+        {            
+            textBoxOnForm.Text += Name + " asks if anyone has a " + value + Environment.NewLine;
+            int totalCardsGiven = 0;
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (i != myIndex)
+                {
+                    Player player = players[i];
+                    Deck CardsGiven = player.DoYouHaveAny(value);
+                    totalCardsGiven += CardsGiven.Count;
+                    while (CardsGiven.Count > 0)
+                    {
+                        cards.Add(CardsGiven.Deal());
+                    }
+                }
+            }
+            if (totalCardsGiven == 0 && stock.Count > 0)
+            {
+                textBoxOnForm.Text += Name + " must draw the stock." + Environment.NewLine;
+                cards.Add(stock.Deal());
+            }
         }
 
         // Here's a property and a few short methods that were already written for you
