@@ -1,0 +1,510 @@
+﻿namespace The_Quest
+{
+    partial class QuestForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestForm));
+            this.btnMoveUp = new System.Windows.Forms.Button();
+            this.btnMoveLeft = new System.Windows.Forms.Button();
+            this.btnMoveRight = new System.Windows.Forms.Button();
+            this.btnMoveDown = new System.Windows.Forms.Button();
+            this.btnAttackDown = new System.Windows.Forms.Button();
+            this.btnAttackRight = new System.Windows.Forms.Button();
+            this.btnAttackLeft = new System.Windows.Forms.Button();
+            this.btnAttackUp = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pbPlayer = new System.Windows.Forms.PictureBox();
+            this.pbBat = new System.Windows.Forms.PictureBox();
+            this.pbGhost = new System.Windows.Forms.PictureBox();
+            this.pbWizard = new System.Windows.Forms.PictureBox();
+            this.pbSwordInv = new System.Windows.Forms.PictureBox();
+            this.pbRedPot = new System.Windows.Forms.PictureBox();
+            this.pbBluePot = new System.Windows.Forms.PictureBox();
+            this.pbBomb = new System.Windows.Forms.PictureBox();
+            this.pbBattleaxe = new System.Windows.Forms.PictureBox();
+            this.pbBow = new System.Windows.Forms.PictureBox();
+            this.pbSword = new System.Windows.Forms.PictureBox();
+            this.pbQuiver = new System.Windows.Forms.PictureBox();
+            this.pbShield = new System.Windows.Forms.PictureBox();
+            this.pbGhoul = new System.Windows.Forms.PictureBox();
+            this.pbRedPotInv = new System.Windows.Forms.PictureBox();
+            this.pbBluePotInv = new System.Windows.Forms.PictureBox();
+            this.pbBombInv = new System.Windows.Forms.PictureBox();
+            this.pbBattleaxeInv = new System.Windows.Forms.PictureBox();
+            this.pbBowInv = new System.Windows.Forms.PictureBox();
+            this.pbQuiverInv = new System.Windows.Forms.PictureBox();
+            this.pbShieldInv = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGhost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWizard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSwordInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRedPot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBluePot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBomb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBattleaxe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuiver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGhoul)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRedPotInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBluePotInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBombInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBattleaxeInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBowInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuiverInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShieldInv)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnMoveUp
+            // 
+            this.btnMoveUp.Location = new System.Drawing.Point(661, 32);
+            this.btnMoveUp.Name = "btnMoveUp";
+            this.btnMoveUp.Size = new System.Drawing.Size(75, 23);
+            this.btnMoveUp.TabIndex = 0;
+            this.btnMoveUp.Text = "Up";
+            this.btnMoveUp.UseVisualStyleBackColor = true;
+            // 
+            // btnMoveLeft
+            // 
+            this.btnMoveLeft.Location = new System.Drawing.Point(616, 61);
+            this.btnMoveLeft.Name = "btnMoveLeft";
+            this.btnMoveLeft.Size = new System.Drawing.Size(75, 23);
+            this.btnMoveLeft.TabIndex = 1;
+            this.btnMoveLeft.Text = "Left";
+            this.btnMoveLeft.UseVisualStyleBackColor = true;
+            // 
+            // btnMoveRight
+            // 
+            this.btnMoveRight.Location = new System.Drawing.Point(706, 61);
+            this.btnMoveRight.Name = "btnMoveRight";
+            this.btnMoveRight.Size = new System.Drawing.Size(75, 23);
+            this.btnMoveRight.TabIndex = 2;
+            this.btnMoveRight.Text = "Right";
+            this.btnMoveRight.UseVisualStyleBackColor = true;
+            // 
+            // btnMoveDown
+            // 
+            this.btnMoveDown.Location = new System.Drawing.Point(661, 90);
+            this.btnMoveDown.Name = "btnMoveDown";
+            this.btnMoveDown.Size = new System.Drawing.Size(75, 23);
+            this.btnMoveDown.TabIndex = 3;
+            this.btnMoveDown.Text = "Down";
+            this.btnMoveDown.UseVisualStyleBackColor = true;
+            // 
+            // btnAttackDown
+            // 
+            this.btnAttackDown.Location = new System.Drawing.Point(661, 232);
+            this.btnAttackDown.Name = "btnAttackDown";
+            this.btnAttackDown.Size = new System.Drawing.Size(75, 23);
+            this.btnAttackDown.TabIndex = 7;
+            this.btnAttackDown.Text = "Down";
+            this.btnAttackDown.UseVisualStyleBackColor = true;
+            // 
+            // btnAttackRight
+            // 
+            this.btnAttackRight.Location = new System.Drawing.Point(706, 203);
+            this.btnAttackRight.Name = "btnAttackRight";
+            this.btnAttackRight.Size = new System.Drawing.Size(75, 23);
+            this.btnAttackRight.TabIndex = 6;
+            this.btnAttackRight.Text = "Right";
+            this.btnAttackRight.UseVisualStyleBackColor = true;
+            // 
+            // btnAttackLeft
+            // 
+            this.btnAttackLeft.Location = new System.Drawing.Point(616, 203);
+            this.btnAttackLeft.Name = "btnAttackLeft";
+            this.btnAttackLeft.Size = new System.Drawing.Size(75, 23);
+            this.btnAttackLeft.TabIndex = 5;
+            this.btnAttackLeft.Text = "Left";
+            this.btnAttackLeft.UseVisualStyleBackColor = true;
+            // 
+            // btnAttackUp
+            // 
+            this.btnAttackUp.Location = new System.Drawing.Point(661, 174);
+            this.btnAttackUp.Name = "btnAttackUp";
+            this.btnAttackUp.Size = new System.Drawing.Size(75, 23);
+            this.btnAttackUp.TabIndex = 4;
+            this.btnAttackUp.Text = "Up";
+            this.btnAttackUp.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(613, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Move";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(613, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Attack";
+            // 
+            // pbPlayer
+            // 
+            this.pbPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.pbPlayer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbPlayer.BackgroundImage")));
+            this.pbPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbPlayer.Image = ((System.Drawing.Image)(resources.GetObject("pbPlayer.Image")));
+            this.pbPlayer.Location = new System.Drawing.Point(79, 60);
+            this.pbPlayer.Name = "pbPlayer";
+            this.pbPlayer.Size = new System.Drawing.Size(30, 30);
+            this.pbPlayer.TabIndex = 10;
+            this.pbPlayer.TabStop = false;
+            // 
+            // pbBat
+            // 
+            this.pbBat.BackColor = System.Drawing.Color.Transparent;
+            this.pbBat.BackgroundImage = global::The_Quest.Properties.Resources.bat;
+            this.pbBat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBat.Location = new System.Drawing.Point(115, 60);
+            this.pbBat.Name = "pbBat";
+            this.pbBat.Size = new System.Drawing.Size(30, 30);
+            this.pbBat.TabIndex = 11;
+            this.pbBat.TabStop = false;
+            // 
+            // pbGhost
+            // 
+            this.pbGhost.BackColor = System.Drawing.Color.Transparent;
+            this.pbGhost.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbGhost.BackgroundImage")));
+            this.pbGhost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbGhost.Location = new System.Drawing.Point(151, 60);
+            this.pbGhost.Name = "pbGhost";
+            this.pbGhost.Size = new System.Drawing.Size(30, 30);
+            this.pbGhost.TabIndex = 12;
+            this.pbGhost.TabStop = false;
+            // 
+            // pbWizard
+            // 
+            this.pbWizard.BackColor = System.Drawing.Color.Transparent;
+            this.pbWizard.BackgroundImage = global::The_Quest.Properties.Resources.wizard;
+            this.pbWizard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbWizard.Location = new System.Drawing.Point(187, 60);
+            this.pbWizard.Name = "pbWizard";
+            this.pbWizard.Size = new System.Drawing.Size(30, 30);
+            this.pbWizard.TabIndex = 13;
+            this.pbWizard.TabStop = false;
+            // 
+            // pbSwordInv
+            // 
+            this.pbSwordInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbSwordInv.BackgroundImage = global::The_Quest.Properties.Resources.swordInv;
+            this.pbSwordInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbSwordInv.Location = new System.Drawing.Point(415, 320);
+            this.pbSwordInv.Name = "pbSwordInv";
+            this.pbSwordInv.Size = new System.Drawing.Size(50, 50);
+            this.pbSwordInv.TabIndex = 14;
+            this.pbSwordInv.TabStop = false;
+            // 
+            // pbRedPot
+            // 
+            this.pbRedPot.BackColor = System.Drawing.Color.Transparent;
+            this.pbRedPot.BackgroundImage = global::The_Quest.Properties.Resources.potion_red;
+            this.pbRedPot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbRedPot.Location = new System.Drawing.Point(79, 96);
+            this.pbRedPot.Name = "pbRedPot";
+            this.pbRedPot.Size = new System.Drawing.Size(30, 30);
+            this.pbRedPot.TabIndex = 15;
+            this.pbRedPot.TabStop = false;
+            // 
+            // pbBluePot
+            // 
+            this.pbBluePot.BackColor = System.Drawing.Color.Transparent;
+            this.pbBluePot.BackgroundImage = global::The_Quest.Properties.Resources.potion_blue;
+            this.pbBluePot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBluePot.Location = new System.Drawing.Point(475, 61);
+            this.pbBluePot.Name = "pbBluePot";
+            this.pbBluePot.Size = new System.Drawing.Size(30, 30);
+            this.pbBluePot.TabIndex = 16;
+            this.pbBluePot.TabStop = false;
+            // 
+            // pbBomb
+            // 
+            this.pbBomb.BackColor = System.Drawing.Color.Transparent;
+            this.pbBomb.BackgroundImage = global::The_Quest.Properties.Resources.bomb;
+            this.pbBomb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBomb.Location = new System.Drawing.Point(439, 60);
+            this.pbBomb.Name = "pbBomb";
+            this.pbBomb.Size = new System.Drawing.Size(30, 30);
+            this.pbBomb.TabIndex = 17;
+            this.pbBomb.TabStop = false;
+            // 
+            // pbBattleaxe
+            // 
+            this.pbBattleaxe.BackColor = System.Drawing.Color.Transparent;
+            this.pbBattleaxe.BackgroundImage = global::The_Quest.Properties.Resources.battleaxe;
+            this.pbBattleaxe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBattleaxe.Location = new System.Drawing.Point(403, 60);
+            this.pbBattleaxe.Name = "pbBattleaxe";
+            this.pbBattleaxe.Size = new System.Drawing.Size(30, 30);
+            this.pbBattleaxe.TabIndex = 18;
+            this.pbBattleaxe.TabStop = false;
+            // 
+            // pbBow
+            // 
+            this.pbBow.BackColor = System.Drawing.Color.Transparent;
+            this.pbBow.BackgroundImage = global::The_Quest.Properties.Resources.bow;
+            this.pbBow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBow.Location = new System.Drawing.Point(367, 60);
+            this.pbBow.Name = "pbBow";
+            this.pbBow.Size = new System.Drawing.Size(30, 30);
+            this.pbBow.TabIndex = 19;
+            this.pbBow.TabStop = false;
+            // 
+            // pbSword
+            // 
+            this.pbSword.BackColor = System.Drawing.Color.Transparent;
+            this.pbSword.BackgroundImage = global::The_Quest.Properties.Resources.sword;
+            this.pbSword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbSword.Location = new System.Drawing.Point(331, 60);
+            this.pbSword.Name = "pbSword";
+            this.pbSword.Size = new System.Drawing.Size(30, 30);
+            this.pbSword.TabIndex = 20;
+            this.pbSword.TabStop = false;
+            // 
+            // pbQuiver
+            // 
+            this.pbQuiver.BackColor = System.Drawing.Color.Transparent;
+            this.pbQuiver.BackgroundImage = global::The_Quest.Properties.Resources.quiver;
+            this.pbQuiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbQuiver.Location = new System.Drawing.Point(295, 60);
+            this.pbQuiver.Name = "pbQuiver";
+            this.pbQuiver.Size = new System.Drawing.Size(30, 30);
+            this.pbQuiver.TabIndex = 21;
+            this.pbQuiver.TabStop = false;
+            // 
+            // pbShield
+            // 
+            this.pbShield.BackColor = System.Drawing.Color.Transparent;
+            this.pbShield.BackgroundImage = global::The_Quest.Properties.Resources.shield;
+            this.pbShield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbShield.Location = new System.Drawing.Point(259, 60);
+            this.pbShield.Name = "pbShield";
+            this.pbShield.Size = new System.Drawing.Size(30, 30);
+            this.pbShield.TabIndex = 22;
+            this.pbShield.TabStop = false;
+            // 
+            // pbGhoul
+            // 
+            this.pbGhoul.BackColor = System.Drawing.Color.Transparent;
+            this.pbGhoul.BackgroundImage = global::The_Quest.Properties.Resources.ghoul;
+            this.pbGhoul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbGhoul.Location = new System.Drawing.Point(223, 60);
+            this.pbGhoul.Name = "pbGhoul";
+            this.pbGhoul.Size = new System.Drawing.Size(30, 30);
+            this.pbGhoul.TabIndex = 23;
+            this.pbGhoul.TabStop = false;
+            // 
+            // pbRedPotInv
+            // 
+            this.pbRedPotInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbRedPotInv.BackgroundImage = global::The_Quest.Properties.Resources.potion_redInv;
+            this.pbRedPotInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbRedPotInv.Location = new System.Drawing.Point(359, 320);
+            this.pbRedPotInv.Name = "pbRedPotInv";
+            this.pbRedPotInv.Size = new System.Drawing.Size(50, 50);
+            this.pbRedPotInv.TabIndex = 24;
+            this.pbRedPotInv.TabStop = false;
+            // 
+            // pbBluePotInv
+            // 
+            this.pbBluePotInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbBluePotInv.BackgroundImage = global::The_Quest.Properties.Resources.potion_blueInv;
+            this.pbBluePotInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBluePotInv.Location = new System.Drawing.Point(303, 320);
+            this.pbBluePotInv.Name = "pbBluePotInv";
+            this.pbBluePotInv.Size = new System.Drawing.Size(50, 50);
+            this.pbBluePotInv.TabIndex = 25;
+            this.pbBluePotInv.TabStop = false;
+            // 
+            // pbBombInv
+            // 
+            this.pbBombInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbBombInv.BackgroundImage = global::The_Quest.Properties.Resources.bombInv;
+            this.pbBombInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBombInv.Location = new System.Drawing.Point(247, 320);
+            this.pbBombInv.Name = "pbBombInv";
+            this.pbBombInv.Size = new System.Drawing.Size(50, 50);
+            this.pbBombInv.TabIndex = 26;
+            this.pbBombInv.TabStop = false;
+            // 
+            // pbBattleaxeInv
+            // 
+            this.pbBattleaxeInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbBattleaxeInv.BackgroundImage = global::The_Quest.Properties.Resources.battleaxeInv;
+            this.pbBattleaxeInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBattleaxeInv.Location = new System.Drawing.Point(191, 320);
+            this.pbBattleaxeInv.Name = "pbBattleaxeInv";
+            this.pbBattleaxeInv.Size = new System.Drawing.Size(50, 50);
+            this.pbBattleaxeInv.TabIndex = 27;
+            this.pbBattleaxeInv.TabStop = false;
+            // 
+            // pbBowInv
+            // 
+            this.pbBowInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbBowInv.BackgroundImage = global::The_Quest.Properties.Resources.bowInv;
+            this.pbBowInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBowInv.Location = new System.Drawing.Point(135, 320);
+            this.pbBowInv.Name = "pbBowInv";
+            this.pbBowInv.Size = new System.Drawing.Size(50, 50);
+            this.pbBowInv.TabIndex = 28;
+            this.pbBowInv.TabStop = false;
+            // 
+            // pbQuiverInv
+            // 
+            this.pbQuiverInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbQuiverInv.BackgroundImage = global::The_Quest.Properties.Resources.quiverInv;
+            this.pbQuiverInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbQuiverInv.Location = new System.Drawing.Point(79, 320);
+            this.pbQuiverInv.Name = "pbQuiverInv";
+            this.pbQuiverInv.Size = new System.Drawing.Size(50, 50);
+            this.pbQuiverInv.TabIndex = 29;
+            this.pbQuiverInv.TabStop = false;
+            // 
+            // pbShieldInv
+            // 
+            this.pbShieldInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbShieldInv.BackgroundImage = global::The_Quest.Properties.Resources.shieldInv;
+            this.pbShieldInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbShieldInv.Location = new System.Drawing.Point(471, 320);
+            this.pbShieldInv.Name = "pbShieldInv";
+            this.pbShieldInv.Size = new System.Drawing.Size(50, 50);
+            this.pbShieldInv.TabIndex = 30;
+            this.pbShieldInv.TabStop = false;
+            // 
+            // QuestForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(795, 401);
+            this.Controls.Add(this.pbShieldInv);
+            this.Controls.Add(this.pbQuiverInv);
+            this.Controls.Add(this.pbBowInv);
+            this.Controls.Add(this.pbBattleaxeInv);
+            this.Controls.Add(this.pbBombInv);
+            this.Controls.Add(this.pbBluePotInv);
+            this.Controls.Add(this.pbRedPotInv);
+            this.Controls.Add(this.pbGhoul);
+            this.Controls.Add(this.pbShield);
+            this.Controls.Add(this.pbQuiver);
+            this.Controls.Add(this.pbSword);
+            this.Controls.Add(this.pbBow);
+            this.Controls.Add(this.pbBattleaxe);
+            this.Controls.Add(this.pbBomb);
+            this.Controls.Add(this.pbBluePot);
+            this.Controls.Add(this.pbRedPot);
+            this.Controls.Add(this.pbSwordInv);
+            this.Controls.Add(this.pbWizard);
+            this.Controls.Add(this.pbGhost);
+            this.Controls.Add(this.pbBat);
+            this.Controls.Add(this.pbPlayer);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAttackDown);
+            this.Controls.Add(this.btnAttackRight);
+            this.Controls.Add(this.btnAttackLeft);
+            this.Controls.Add(this.btnAttackUp);
+            this.Controls.Add(this.btnMoveDown);
+            this.Controls.Add(this.btnMoveRight);
+            this.Controls.Add(this.btnMoveLeft);
+            this.Controls.Add(this.btnMoveUp);
+            this.Name = "QuestForm";
+            this.Text = "The Quest";
+            this.Load += new System.EventHandler(this.QuestForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGhost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWizard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSwordInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRedPot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBluePot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBomb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBattleaxe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuiver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGhoul)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRedPotInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBluePotInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBombInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBattleaxeInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBowInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuiverInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShieldInv)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnMoveUp;
+        private System.Windows.Forms.Button btnMoveLeft;
+        private System.Windows.Forms.Button btnMoveRight;
+        private System.Windows.Forms.Button btnMoveDown;
+        private System.Windows.Forms.Button btnAttackDown;
+        private System.Windows.Forms.Button btnAttackRight;
+        private System.Windows.Forms.Button btnAttackLeft;
+        private System.Windows.Forms.Button btnAttackUp;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbPlayer;
+        private System.Windows.Forms.PictureBox pbBat;
+        private System.Windows.Forms.PictureBox pbGhost;
+        private System.Windows.Forms.PictureBox pbWizard;
+        private System.Windows.Forms.PictureBox pbSwordInv;
+        private System.Windows.Forms.PictureBox pbRedPot;
+        private System.Windows.Forms.PictureBox pbBluePot;
+        private System.Windows.Forms.PictureBox pbBomb;
+        private System.Windows.Forms.PictureBox pbBattleaxe;
+        private System.Windows.Forms.PictureBox pbBow;
+        private System.Windows.Forms.PictureBox pbSword;
+        private System.Windows.Forms.PictureBox pbQuiver;
+        private System.Windows.Forms.PictureBox pbShield;
+        private System.Windows.Forms.PictureBox pbGhoul;
+        private System.Windows.Forms.PictureBox pbRedPotInv;
+        private System.Windows.Forms.PictureBox pbBluePotInv;
+        private System.Windows.Forms.PictureBox pbBombInv;
+        private System.Windows.Forms.PictureBox pbBattleaxeInv;
+        private System.Windows.Forms.PictureBox pbBowInv;
+        private System.Windows.Forms.PictureBox pbQuiverInv;
+        private System.Windows.Forms.PictureBox pbShieldInv;
+    }
+}
+
