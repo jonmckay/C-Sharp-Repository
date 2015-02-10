@@ -60,6 +60,15 @@
             this.pbBowInv = new System.Windows.Forms.PictureBox();
             this.pbQuiverInv = new System.Windows.Forms.PictureBox();
             this.pbShieldInv = new System.Windows.Forms.PictureBox();
+            this.tlpStats = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPlayer = new System.Windows.Forms.Label();
+            this.lblBat = new System.Windows.Forms.Label();
+            this.lblGhost = new System.Windows.Forms.Label();
+            this.lblGhoul = new System.Windows.Forms.Label();
+            this.lblPlayerHitPoint = new System.Windows.Forms.Label();
+            this.lblBatHitPoints = new System.Windows.Forms.Label();
+            this.lblGhostHitPoints = new System.Windows.Forms.Label();
+            this.lblGhoulHitPoints = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGhost)).BeginInit();
@@ -81,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBowInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuiverInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShieldInv)).BeginInit();
+            this.tlpStats.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMoveUp
@@ -184,6 +194,7 @@
             this.pbPlayer.Size = new System.Drawing.Size(30, 30);
             this.pbPlayer.TabIndex = 10;
             this.pbPlayer.TabStop = false;
+            this.pbPlayer.Visible = false;
             // 
             // pbBat
             // 
@@ -195,6 +206,7 @@
             this.pbBat.Size = new System.Drawing.Size(30, 30);
             this.pbBat.TabIndex = 11;
             this.pbBat.TabStop = false;
+            this.pbBat.Visible = false;
             // 
             // pbGhost
             // 
@@ -206,6 +218,7 @@
             this.pbGhost.Size = new System.Drawing.Size(30, 30);
             this.pbGhost.TabIndex = 12;
             this.pbGhost.TabStop = false;
+            this.pbGhost.Visible = false;
             // 
             // pbWizard
             // 
@@ -217,6 +230,7 @@
             this.pbWizard.Size = new System.Drawing.Size(30, 30);
             this.pbWizard.TabIndex = 13;
             this.pbWizard.TabStop = false;
+            this.pbWizard.Visible = false;
             // 
             // pbSwordInv
             // 
@@ -228,6 +242,7 @@
             this.pbSwordInv.Size = new System.Drawing.Size(50, 50);
             this.pbSwordInv.TabIndex = 14;
             this.pbSwordInv.TabStop = false;
+            this.pbSwordInv.Visible = false;
             // 
             // pbRedPot
             // 
@@ -239,6 +254,7 @@
             this.pbRedPot.Size = new System.Drawing.Size(30, 30);
             this.pbRedPot.TabIndex = 15;
             this.pbRedPot.TabStop = false;
+            this.pbRedPot.Visible = false;
             // 
             // pbBluePot
             // 
@@ -250,6 +266,7 @@
             this.pbBluePot.Size = new System.Drawing.Size(30, 30);
             this.pbBluePot.TabIndex = 16;
             this.pbBluePot.TabStop = false;
+            this.pbBluePot.Visible = false;
             // 
             // pbBomb
             // 
@@ -261,6 +278,7 @@
             this.pbBomb.Size = new System.Drawing.Size(30, 30);
             this.pbBomb.TabIndex = 17;
             this.pbBomb.TabStop = false;
+            this.pbBomb.Visible = false;
             // 
             // pbBattleaxe
             // 
@@ -272,6 +290,7 @@
             this.pbBattleaxe.Size = new System.Drawing.Size(30, 30);
             this.pbBattleaxe.TabIndex = 18;
             this.pbBattleaxe.TabStop = false;
+            this.pbBattleaxe.Visible = false;
             // 
             // pbBow
             // 
@@ -283,6 +302,7 @@
             this.pbBow.Size = new System.Drawing.Size(30, 30);
             this.pbBow.TabIndex = 19;
             this.pbBow.TabStop = false;
+            this.pbBow.Visible = false;
             // 
             // pbSword
             // 
@@ -294,6 +314,7 @@
             this.pbSword.Size = new System.Drawing.Size(30, 30);
             this.pbSword.TabIndex = 20;
             this.pbSword.TabStop = false;
+            this.pbSword.Visible = false;
             // 
             // pbQuiver
             // 
@@ -305,6 +326,7 @@
             this.pbQuiver.Size = new System.Drawing.Size(30, 30);
             this.pbQuiver.TabIndex = 21;
             this.pbQuiver.TabStop = false;
+            this.pbQuiver.Visible = false;
             // 
             // pbShield
             // 
@@ -316,6 +338,7 @@
             this.pbShield.Size = new System.Drawing.Size(30, 30);
             this.pbShield.TabIndex = 22;
             this.pbShield.TabStop = false;
+            this.pbShield.Visible = false;
             // 
             // pbGhoul
             // 
@@ -327,6 +350,7 @@
             this.pbGhoul.Size = new System.Drawing.Size(30, 30);
             this.pbGhoul.TabIndex = 23;
             this.pbGhoul.TabStop = false;
+            this.pbGhoul.Visible = false;
             // 
             // pbRedPotInv
             // 
@@ -338,6 +362,7 @@
             this.pbRedPotInv.Size = new System.Drawing.Size(50, 50);
             this.pbRedPotInv.TabIndex = 24;
             this.pbRedPotInv.TabStop = false;
+            this.pbRedPotInv.Visible = false;
             // 
             // pbBluePotInv
             // 
@@ -349,6 +374,7 @@
             this.pbBluePotInv.Size = new System.Drawing.Size(50, 50);
             this.pbBluePotInv.TabIndex = 25;
             this.pbBluePotInv.TabStop = false;
+            this.pbBluePotInv.Visible = false;
             // 
             // pbBombInv
             // 
@@ -360,6 +386,7 @@
             this.pbBombInv.Size = new System.Drawing.Size(50, 50);
             this.pbBombInv.TabIndex = 26;
             this.pbBombInv.TabStop = false;
+            this.pbBombInv.Visible = false;
             // 
             // pbBattleaxeInv
             // 
@@ -371,6 +398,7 @@
             this.pbBattleaxeInv.Size = new System.Drawing.Size(50, 50);
             this.pbBattleaxeInv.TabIndex = 27;
             this.pbBattleaxeInv.TabStop = false;
+            this.pbBattleaxeInv.Visible = false;
             // 
             // pbBowInv
             // 
@@ -382,6 +410,7 @@
             this.pbBowInv.Size = new System.Drawing.Size(50, 50);
             this.pbBowInv.TabIndex = 28;
             this.pbBowInv.TabStop = false;
+            this.pbBowInv.Visible = false;
             // 
             // pbQuiverInv
             // 
@@ -393,6 +422,7 @@
             this.pbQuiverInv.Size = new System.Drawing.Size(50, 50);
             this.pbQuiverInv.TabIndex = 29;
             this.pbQuiverInv.TabStop = false;
+            this.pbQuiverInv.Visible = false;
             // 
             // pbShieldInv
             // 
@@ -404,6 +434,111 @@
             this.pbShieldInv.Size = new System.Drawing.Size(50, 50);
             this.pbShieldInv.TabIndex = 30;
             this.pbShieldInv.TabStop = false;
+            this.pbShieldInv.Visible = false;
+            // 
+            // tlpStats
+            // 
+            this.tlpStats.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tlpStats.ColumnCount = 2;
+            this.tlpStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.44304F));
+            this.tlpStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.55696F));
+            this.tlpStats.Controls.Add(this.lblPlayer, 0, 0);
+            this.tlpStats.Controls.Add(this.lblBat, 0, 1);
+            this.tlpStats.Controls.Add(this.lblGhost, 0, 2);
+            this.tlpStats.Controls.Add(this.lblGhoul, 0, 3);
+            this.tlpStats.Controls.Add(this.lblPlayerHitPoint, 1, 0);
+            this.tlpStats.Controls.Add(this.lblBatHitPoints, 1, 1);
+            this.tlpStats.Controls.Add(this.lblGhostHitPoints, 1, 2);
+            this.tlpStats.Controls.Add(this.lblGhoulHitPoints, 1, 3);
+            this.tlpStats.Location = new System.Drawing.Point(622, 266);
+            this.tlpStats.Name = "tlpStats";
+            this.tlpStats.RowCount = 4;
+            this.tlpStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpStats.Size = new System.Drawing.Size(158, 125);
+            this.tlpStats.TabIndex = 31;
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Location = new System.Drawing.Point(10, 9);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(36, 13);
+            this.lblPlayer.TabIndex = 0;
+            this.lblPlayer.Text = "Player";
+            // 
+            // lblBat
+            // 
+            this.lblBat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBat.AutoSize = true;
+            this.lblBat.Location = new System.Drawing.Point(16, 40);
+            this.lblBat.Name = "lblBat";
+            this.lblBat.Size = new System.Drawing.Size(23, 13);
+            this.lblBat.TabIndex = 1;
+            this.lblBat.Text = "Bat";
+            // 
+            // lblGhost
+            // 
+            this.lblGhost.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGhost.AutoSize = true;
+            this.lblGhost.Location = new System.Drawing.Point(10, 71);
+            this.lblGhost.Name = "lblGhost";
+            this.lblGhost.Size = new System.Drawing.Size(35, 13);
+            this.lblGhost.TabIndex = 2;
+            this.lblGhost.Text = "Ghost";
+            // 
+            // lblGhoul
+            // 
+            this.lblGhoul.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGhoul.AutoSize = true;
+            this.lblGhoul.Location = new System.Drawing.Point(10, 102);
+            this.lblGhoul.Name = "lblGhoul";
+            this.lblGhoul.Size = new System.Drawing.Size(35, 13);
+            this.lblGhoul.TabIndex = 3;
+            this.lblGhoul.Text = "Ghoul";
+            // 
+            // lblPlayerHitPoint
+            // 
+            this.lblPlayerHitPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPlayerHitPoint.AutoSize = true;
+            this.lblPlayerHitPoint.Location = new System.Drawing.Point(70, 9);
+            this.lblPlayerHitPoint.Name = "lblPlayerHitPoint";
+            this.lblPlayerHitPoint.Size = new System.Drawing.Size(73, 13);
+            this.lblPlayerHitPoint.TabIndex = 4;
+            this.lblPlayerHitPoint.Text = "PlayerHitPoint";
+            // 
+            // lblBatHitPoints
+            // 
+            this.lblBatHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBatHitPoints.AutoSize = true;
+            this.lblBatHitPoints.Location = new System.Drawing.Point(74, 40);
+            this.lblBatHitPoints.Name = "lblBatHitPoints";
+            this.lblBatHitPoints.Size = new System.Drawing.Size(65, 13);
+            this.lblBatHitPoints.TabIndex = 5;
+            this.lblBatHitPoints.Text = "BatHitPoints";
+            // 
+            // lblGhostHitPoints
+            // 
+            this.lblGhostHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGhostHitPoints.AutoSize = true;
+            this.lblGhostHitPoints.Location = new System.Drawing.Point(68, 71);
+            this.lblGhostHitPoints.Name = "lblGhostHitPoints";
+            this.lblGhostHitPoints.Size = new System.Drawing.Size(77, 13);
+            this.lblGhostHitPoints.TabIndex = 6;
+            this.lblGhostHitPoints.Text = "GhostHitPoints";
+            // 
+            // lblGhoulHitPoints
+            // 
+            this.lblGhoulHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGhoulHitPoints.AutoSize = true;
+            this.lblGhoulHitPoints.Location = new System.Drawing.Point(68, 102);
+            this.lblGhoulHitPoints.Name = "lblGhoulHitPoints";
+            this.lblGhoulHitPoints.Size = new System.Drawing.Size(77, 13);
+            this.lblGhoulHitPoints.TabIndex = 7;
+            this.lblGhoulHitPoints.Text = "GhoulHitPoints";
             // 
             // QuestForm
             // 
@@ -412,6 +547,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(795, 401);
+            this.Controls.Add(this.tlpStats);
+            this.Controls.Add(this.pbPlayer);
             this.Controls.Add(this.pbShieldInv);
             this.Controls.Add(this.pbQuiverInv);
             this.Controls.Add(this.pbBowInv);
@@ -420,19 +557,10 @@
             this.Controls.Add(this.pbBluePotInv);
             this.Controls.Add(this.pbRedPotInv);
             this.Controls.Add(this.pbGhoul);
-            this.Controls.Add(this.pbShield);
-            this.Controls.Add(this.pbQuiver);
-            this.Controls.Add(this.pbSword);
-            this.Controls.Add(this.pbBow);
-            this.Controls.Add(this.pbBattleaxe);
-            this.Controls.Add(this.pbBomb);
-            this.Controls.Add(this.pbBluePot);
-            this.Controls.Add(this.pbRedPot);
             this.Controls.Add(this.pbSwordInv);
             this.Controls.Add(this.pbWizard);
             this.Controls.Add(this.pbGhost);
             this.Controls.Add(this.pbBat);
-            this.Controls.Add(this.pbPlayer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAttackDown);
@@ -443,6 +571,14 @@
             this.Controls.Add(this.btnMoveRight);
             this.Controls.Add(this.btnMoveLeft);
             this.Controls.Add(this.btnMoveUp);
+            this.Controls.Add(this.pbShield);
+            this.Controls.Add(this.pbQuiver);
+            this.Controls.Add(this.pbSword);
+            this.Controls.Add(this.pbBow);
+            this.Controls.Add(this.pbBattleaxe);
+            this.Controls.Add(this.pbBomb);
+            this.Controls.Add(this.pbBluePot);
+            this.Controls.Add(this.pbRedPot);
             this.Name = "QuestForm";
             this.Text = "The Quest";
             this.Load += new System.EventHandler(this.QuestForm_Load);
@@ -467,6 +603,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBowInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuiverInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShieldInv)).EndInit();
+            this.tlpStats.ResumeLayout(false);
+            this.tlpStats.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,6 +643,15 @@
         private System.Windows.Forms.PictureBox pbBowInv;
         private System.Windows.Forms.PictureBox pbQuiverInv;
         private System.Windows.Forms.PictureBox pbShieldInv;
+        private System.Windows.Forms.TableLayoutPanel tlpStats;
+        private System.Windows.Forms.Label lblPlayer;
+        private System.Windows.Forms.Label lblBat;
+        private System.Windows.Forms.Label lblGhost;
+        private System.Windows.Forms.Label lblGhoul;
+        private System.Windows.Forms.Label lblPlayerHitPoint;
+        private System.Windows.Forms.Label lblBatHitPoints;
+        private System.Windows.Forms.Label lblGhostHitPoints;
+        private System.Windows.Forms.Label lblGhoulHitPoints;
     }
 }
 

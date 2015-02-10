@@ -17,6 +17,15 @@ namespace The_Quest
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Reads the location of the player, enemies, and any weapons currently in the dungeon
+        /// and moves the PictureBoxes to match them.
+        /// </summary>
+        private void UpdateCharacters()
+        {
+            throw new NotImplementedException();
+        }
+
         private void QuestForm_Load(object sender, EventArgs e)
         {
 
