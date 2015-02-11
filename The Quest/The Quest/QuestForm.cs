@@ -30,5 +30,45 @@ namespace The_Quest
         {
 
         }
+
+        private void btnMoveUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMoveLeft_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMoveRight_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMoveDown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAttackUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAttackLeft_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAttackRight_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAttackDown_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

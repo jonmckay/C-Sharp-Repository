@@ -101,6 +101,7 @@
             this.btnMoveUp.TabIndex = 0;
             this.btnMoveUp.Text = "Up";
             this.btnMoveUp.UseVisualStyleBackColor = true;
+            this.btnMoveUp.Click += new System.EventHandler(this.btnMoveUp_Click);
             // 
             // btnMoveLeft
             // 
@@ -110,6 +111,7 @@
             this.btnMoveLeft.TabIndex = 1;
             this.btnMoveLeft.Text = "Left";
             this.btnMoveLeft.UseVisualStyleBackColor = true;
+            this.btnMoveLeft.Click += new System.EventHandler(this.btnMoveLeft_Click);
             // 
             // btnMoveRight
             // 
@@ -119,6 +121,7 @@
             this.btnMoveRight.TabIndex = 2;
             this.btnMoveRight.Text = "Right";
             this.btnMoveRight.UseVisualStyleBackColor = true;
+            this.btnMoveRight.Click += new System.EventHandler(this.btnMoveRight_Click);
             // 
             // btnMoveDown
             // 
@@ -128,6 +131,7 @@
             this.btnMoveDown.TabIndex = 3;
             this.btnMoveDown.Text = "Down";
             this.btnMoveDown.UseVisualStyleBackColor = true;
+            this.btnMoveDown.Click += new System.EventHandler(this.btnMoveDown_Click);
             // 
             // btnAttackDown
             // 
@@ -137,6 +141,7 @@
             this.btnAttackDown.TabIndex = 7;
             this.btnAttackDown.Text = "Down";
             this.btnAttackDown.UseVisualStyleBackColor = true;
+            this.btnAttackDown.Click += new System.EventHandler(this.btnAttackDown_Click);
             // 
             // btnAttackRight
             // 
@@ -146,6 +151,7 @@
             this.btnAttackRight.TabIndex = 6;
             this.btnAttackRight.Text = "Right";
             this.btnAttackRight.UseVisualStyleBackColor = true;
+            this.btnAttackRight.Click += new System.EventHandler(this.btnAttackRight_Click);
             // 
             // btnAttackLeft
             // 
@@ -155,6 +161,7 @@
             this.btnAttackLeft.TabIndex = 5;
             this.btnAttackLeft.Text = "Left";
             this.btnAttackLeft.UseVisualStyleBackColor = true;
+            this.btnAttackLeft.Click += new System.EventHandler(this.btnAttackLeft_Click);
             // 
             // btnAttackUp
             // 
@@ -164,6 +171,7 @@
             this.btnAttackUp.TabIndex = 4;
             this.btnAttackUp.Text = "Up";
             this.btnAttackUp.UseVisualStyleBackColor = true;
+            this.btnAttackUp.Click += new System.EventHandler(this.btnAttackUp_Click);
             // 
             // label1
             // 
@@ -199,7 +207,7 @@
             // pbBat
             // 
             this.pbBat.BackColor = System.Drawing.Color.Transparent;
-            this.pbBat.BackgroundImage = global::The_Quest.Properties.Resources.bat;
+            this.pbBat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbBat.BackgroundImage")));
             this.pbBat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbBat.Location = new System.Drawing.Point(115, 60);
             this.pbBat.Name = "pbBat";
@@ -223,7 +231,7 @@
             // pbWizard
             // 
             this.pbWizard.BackColor = System.Drawing.Color.Transparent;
-            this.pbWizard.BackgroundImage = global::The_Quest.Properties.Resources.wizard;
+            this.pbWizard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbWizard.BackgroundImage")));
             this.pbWizard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbWizard.Location = new System.Drawing.Point(187, 60);
             this.pbWizard.Name = "pbWizard";
@@ -247,7 +255,7 @@
             // pbRedPot
             // 
             this.pbRedPot.BackColor = System.Drawing.Color.Transparent;
-            this.pbRedPot.BackgroundImage = global::The_Quest.Properties.Resources.potion_red;
+            this.pbRedPot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbRedPot.BackgroundImage")));
             this.pbRedPot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbRedPot.Location = new System.Drawing.Point(79, 96);
             this.pbRedPot.Name = "pbRedPot";
@@ -259,7 +267,7 @@
             // pbBluePot
             // 
             this.pbBluePot.BackColor = System.Drawing.Color.Transparent;
-            this.pbBluePot.BackgroundImage = global::The_Quest.Properties.Resources.potion_blue;
+            this.pbBluePot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbBluePot.BackgroundImage")));
             this.pbBluePot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbBluePot.Location = new System.Drawing.Point(475, 61);
             this.pbBluePot.Name = "pbBluePot";
@@ -271,7 +279,7 @@
             // pbBomb
             // 
             this.pbBomb.BackColor = System.Drawing.Color.Transparent;
-            this.pbBomb.BackgroundImage = global::The_Quest.Properties.Resources.bomb;
+            this.pbBomb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbBomb.BackgroundImage")));
             this.pbBomb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbBomb.Location = new System.Drawing.Point(439, 60);
             this.pbBomb.Name = "pbBomb";
@@ -283,7 +291,7 @@
             // pbBattleaxe
             // 
             this.pbBattleaxe.BackColor = System.Drawing.Color.Transparent;
-            this.pbBattleaxe.BackgroundImage = global::The_Quest.Properties.Resources.battleaxe;
+            this.pbBattleaxe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbBattleaxe.BackgroundImage")));
             this.pbBattleaxe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbBattleaxe.Location = new System.Drawing.Point(403, 60);
             this.pbBattleaxe.Name = "pbBattleaxe";
@@ -295,7 +303,7 @@
             // pbBow
             // 
             this.pbBow.BackColor = System.Drawing.Color.Transparent;
-            this.pbBow.BackgroundImage = global::The_Quest.Properties.Resources.bow;
+            this.pbBow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbBow.BackgroundImage")));
             this.pbBow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbBow.Location = new System.Drawing.Point(367, 60);
             this.pbBow.Name = "pbBow";
@@ -307,7 +315,7 @@
             // pbSword
             // 
             this.pbSword.BackColor = System.Drawing.Color.Transparent;
-            this.pbSword.BackgroundImage = global::The_Quest.Properties.Resources.sword;
+            this.pbSword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbSword.BackgroundImage")));
             this.pbSword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbSword.Location = new System.Drawing.Point(331, 60);
             this.pbSword.Name = "pbSword";
@@ -319,7 +327,7 @@
             // pbQuiver
             // 
             this.pbQuiver.BackColor = System.Drawing.Color.Transparent;
-            this.pbQuiver.BackgroundImage = global::The_Quest.Properties.Resources.quiver;
+            this.pbQuiver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbQuiver.BackgroundImage")));
             this.pbQuiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbQuiver.Location = new System.Drawing.Point(295, 60);
             this.pbQuiver.Name = "pbQuiver";
@@ -331,7 +339,7 @@
             // pbShield
             // 
             this.pbShield.BackColor = System.Drawing.Color.Transparent;
-            this.pbShield.BackgroundImage = global::The_Quest.Properties.Resources.shield;
+            this.pbShield.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbShield.BackgroundImage")));
             this.pbShield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbShield.Location = new System.Drawing.Point(259, 60);
             this.pbShield.Name = "pbShield";
@@ -343,7 +351,7 @@
             // pbGhoul
             // 
             this.pbGhoul.BackColor = System.Drawing.Color.Transparent;
-            this.pbGhoul.BackgroundImage = global::The_Quest.Properties.Resources.ghoul;
+            this.pbGhoul.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbGhoul.BackgroundImage")));
             this.pbGhoul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbGhoul.Location = new System.Drawing.Point(223, 60);
             this.pbGhoul.Name = "pbGhoul";
@@ -579,6 +587,7 @@
             this.Controls.Add(this.pbBomb);
             this.Controls.Add(this.pbBluePot);
             this.Controls.Add(this.pbRedPot);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QuestForm";
             this.Text = "The Quest";
             this.Load += new System.EventHandler(this.QuestForm_Load);

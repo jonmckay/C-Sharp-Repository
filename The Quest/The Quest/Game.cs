@@ -92,6 +92,37 @@ namespace The_Quest
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     WeaponInRoom = new Sword(this, GetRandomLocation(random));
                     break;
+                case 2:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                    break;
+                case 3:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                    break;
+                case 4:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    if (CheckPlayerInventory("Bow") && !CheckPlayerInventory("BluePotion"))
+                    {
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                    }
+                    else
+                    {
+                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                    }                    
+                    break;
+                case 5:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                    break;
+                case 6:
+
                 default:
                     break;
             }

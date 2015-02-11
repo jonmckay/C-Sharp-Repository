@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace The_Quest
 {
-    class Bat : Enemy
+    class Ghost : Enemy
     {
-        public Bat(Game game, Point location) : base(game,location,6) {}
+        public Ghost(Game game, Point location) : base(game, location, 8){}
 
         public override void Move(Random random)
         {
