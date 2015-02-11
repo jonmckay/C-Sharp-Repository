@@ -20,6 +20,11 @@ namespace The_Quest
             this.location = location;
         }
 
+        public bool Nearby(Point enemyLocation, Point targetLocation, int distance)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Nearby(Point locationToCheck, int distance )
         {
             if (Math.Abs(location.X - locationToCheck.X) < distance && (Math.Abs(location.Y - locationToCheck.Y) < distance))
@@ -30,6 +35,11 @@ namespace The_Quest
             {
                 return false;
             }
+        }
+
+        public Point Move(Direction direction, Point targetLocation, Rectangle boundaries)
+        {
+            throw new NotImplementedException();
         }
 
         public Point Move(Direction direction, Rectangle boundaries)

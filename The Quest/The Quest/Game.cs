@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace The_Quest
 {
@@ -122,8 +123,28 @@ namespace The_Quest
                     WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                     break;
                 case 6:
-
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                    break;
+                case 7:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    if (CheckPlayerInventory("Mace") && !CheckPlayerInventory("RedPotion"))
+                    {
+                        WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                    }
+                    else
+                    {
+                        WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                    }
+                    break;
+                case 8:
                 default:
+                    Application.Exit();
                     break;
             }
         }

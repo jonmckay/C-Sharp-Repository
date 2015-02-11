@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 namespace The_Quest
 {
     class BluePotion : Weapon
     {
-        private Game game;
-        private System.Drawing.Point point;
+        public BluePotion(Game game, Point location) : base(game, location) { }
 
-        public BluePotion(Game game, System.Drawing.Point point)
+        public override string Name
         {
-            // TODO: Complete member initialization
-            this.game = game;
-            this.point = point;
+            get { return "BluePotion"; }
+        }
+
+        public override void Attack(Direction direction, Random random)
+        {
+            throw new NotImplementedException();
         }
     }
 }

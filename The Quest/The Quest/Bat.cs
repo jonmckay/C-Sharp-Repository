@@ -8,11 +8,20 @@ namespace The_Quest
 {
     class Bat : Enemy
     {
-        public Bat(Game game, Point location) : base(game,location,6) {}
+        public Bat(Game game, Point location) : base(game, location, 6) { }
 
         public override void Move(Random random)
         {
-            throw new NotImplementedException();
+            if (random.Next(0, 2) == 0)
+            {
+                this.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+            }
+            else
+            {
+                var values = Enum.GetValues(typeof(Direction));
+                Direction direction = (Direction)values.GetValue(random.Next(values.Length));
+                this.Move(direction, game.Boundaries);
+            }
         }
     }
 }

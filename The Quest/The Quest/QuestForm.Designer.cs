@@ -101,7 +101,7 @@
             this.btnMoveUp.TabIndex = 0;
             this.btnMoveUp.Text = "Up";
             this.btnMoveUp.UseVisualStyleBackColor = true;
-            this.btnMoveUp.Click += new System.EventHandler(this.btnMoveUp_Click);
+            this.btnMoveUp.Click += new System.EventHandler(this.MoveClick);
             // 
             // btnMoveLeft
             // 
@@ -111,7 +111,7 @@
             this.btnMoveLeft.TabIndex = 1;
             this.btnMoveLeft.Text = "Left";
             this.btnMoveLeft.UseVisualStyleBackColor = true;
-            this.btnMoveLeft.Click += new System.EventHandler(this.btnMoveLeft_Click);
+            this.btnMoveLeft.Click += new System.EventHandler(this.MoveClick);
             // 
             // btnMoveRight
             // 
@@ -121,7 +121,7 @@
             this.btnMoveRight.TabIndex = 2;
             this.btnMoveRight.Text = "Right";
             this.btnMoveRight.UseVisualStyleBackColor = true;
-            this.btnMoveRight.Click += new System.EventHandler(this.btnMoveRight_Click);
+            this.btnMoveRight.Click += new System.EventHandler(this.MoveClick);
             // 
             // btnMoveDown
             // 
@@ -131,7 +131,7 @@
             this.btnMoveDown.TabIndex = 3;
             this.btnMoveDown.Text = "Down";
             this.btnMoveDown.UseVisualStyleBackColor = true;
-            this.btnMoveDown.Click += new System.EventHandler(this.btnMoveDown_Click);
+            this.btnMoveDown.Click += new System.EventHandler(this.MoveClick);
             // 
             // btnAttackDown
             // 
@@ -141,7 +141,7 @@
             this.btnAttackDown.TabIndex = 7;
             this.btnAttackDown.Text = "Down";
             this.btnAttackDown.UseVisualStyleBackColor = true;
-            this.btnAttackDown.Click += new System.EventHandler(this.btnAttackDown_Click);
+            this.btnAttackDown.Click += new System.EventHandler(this.AttackClick);
             // 
             // btnAttackRight
             // 
@@ -151,7 +151,7 @@
             this.btnAttackRight.TabIndex = 6;
             this.btnAttackRight.Text = "Right";
             this.btnAttackRight.UseVisualStyleBackColor = true;
-            this.btnAttackRight.Click += new System.EventHandler(this.btnAttackRight_Click);
+            this.btnAttackRight.Click += new System.EventHandler(this.AttackClick);
             // 
             // btnAttackLeft
             // 
@@ -161,7 +161,7 @@
             this.btnAttackLeft.TabIndex = 5;
             this.btnAttackLeft.Text = "Left";
             this.btnAttackLeft.UseVisualStyleBackColor = true;
-            this.btnAttackLeft.Click += new System.EventHandler(this.btnAttackLeft_Click);
+            this.btnAttackLeft.Click += new System.EventHandler(this.AttackClick);
             // 
             // btnAttackUp
             // 
@@ -171,7 +171,7 @@
             this.btnAttackUp.TabIndex = 4;
             this.btnAttackUp.Text = "Up";
             this.btnAttackUp.UseVisualStyleBackColor = true;
-            this.btnAttackUp.Click += new System.EventHandler(this.btnAttackUp_Click);
+            this.btnAttackUp.Click += new System.EventHandler(this.AttackClick);
             // 
             // label1
             // 
@@ -202,7 +202,6 @@
             this.pbPlayer.Size = new System.Drawing.Size(30, 30);
             this.pbPlayer.TabIndex = 10;
             this.pbPlayer.TabStop = false;
-            this.pbPlayer.Visible = false;
             // 
             // pbBat
             // 
@@ -214,7 +213,6 @@
             this.pbBat.Size = new System.Drawing.Size(30, 30);
             this.pbBat.TabIndex = 11;
             this.pbBat.TabStop = false;
-            this.pbBat.Visible = false;
             // 
             // pbGhost
             // 
@@ -406,7 +404,7 @@
             this.pbBattleaxeInv.Size = new System.Drawing.Size(50, 50);
             this.pbBattleaxeInv.TabIndex = 27;
             this.pbBattleaxeInv.TabStop = false;
-            this.pbBattleaxeInv.Visible = false;
+            this.pbBattleaxeInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbBowInv
             // 
@@ -430,7 +428,7 @@
             this.pbQuiverInv.Size = new System.Drawing.Size(50, 50);
             this.pbQuiverInv.TabIndex = 29;
             this.pbQuiverInv.TabStop = false;
-            this.pbQuiverInv.Visible = false;
+            this.pbQuiverInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbShieldInv
             // 

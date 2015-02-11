@@ -12,6 +12,9 @@ namespace The_Quest
 {
     public partial class QuestForm : Form
     {
+        private Game game;
+        private Random random = new Random();
+
         public QuestForm()
         {
             InitializeComponent();
@@ -28,47 +31,63 @@ namespace The_Quest
 
         private void QuestForm_Load(object sender, EventArgs e)
         {
-
+            game = new Game(new Rectangle(78, 57, 420, 155));
+            game.NewLevel(random);
+            UpdateCharacters();
         }
 
-        private void btnMoveUp_Click(object sender, EventArgs e)
+        private void MoveClick(object sender, EventArgs e)
         {
-
+            if (sender == btnMoveUp)
+            {
+                game.Move(Direction.Up, random);
+            }
+            else if (sender == btnMoveDown)
+            {
+                game.Move(Direction.Down, random);
+            }
+            else if (sender == btnMoveLeft)
+            {
+                game.Move(Direction.Left, random);
+            }
+            else if (sender == btnMoveRight)
+            {
+                game.Move(Direction.Right, random);
+            }
         }
 
-        private void btnMoveLeft_Click(object sender, EventArgs e)
+        private void AttackClick(object sender, EventArgs e)
         {
-
+            if (sender == btnAttackUp)
+            {
+                game.Attack(Direction.Up, random);
+            }
+            else if (sender == btnAttackDown)
+            {
+                game.Attack(Direction.Down, random);
+            }
+            else if (sender == btnAttackLeft)
+            {
+                game.Attack(Direction.Left, random);
+            }
+            else if (sender == btnAttackRight)
+            {
+                game.Attack(Direction.Right, random);
+            }
         }
 
-        private void btnMoveRight_Click(object sender, EventArgs e)
+        private void InventoryItemClick(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnMoveDown_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAttackUp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAttackLeft_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAttackRight_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAttackDown_Click(object sender, EventArgs e)
-        {
-
+            if (sender == pbBattleaxeInv)
+            {
+                pbBattleaxeInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("Battleaxe");
+            }
+            else if (sender == pbQuiverInv)
+            {
+                pbQuiverInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("Quiver");
+            }
         }
     }
 }
