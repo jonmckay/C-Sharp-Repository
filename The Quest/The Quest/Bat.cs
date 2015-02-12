@@ -20,7 +20,7 @@ namespace The_Quest
             {
                 var values = Enum.GetValues(typeof(Direction));
                 Direction direction = (Direction)values.GetValue(random.Next(values.Length));
-                this.Move(direction, game.Boundaries);
+                this.location = this.Move(direction, game.Boundaries);
             }
         }
     }

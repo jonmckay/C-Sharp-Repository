@@ -51,7 +51,7 @@
             this.pbBow = new System.Windows.Forms.PictureBox();
             this.pbSword = new System.Windows.Forms.PictureBox();
             this.pbQuiver = new System.Windows.Forms.PictureBox();
-            this.pbShield = new System.Windows.Forms.PictureBox();
+            this.pbMace = new System.Windows.Forms.PictureBox();
             this.pbGhoul = new System.Windows.Forms.PictureBox();
             this.pbRedPotInv = new System.Windows.Forms.PictureBox();
             this.pbBluePotInv = new System.Windows.Forms.PictureBox();
@@ -59,7 +59,7 @@
             this.pbBattleaxeInv = new System.Windows.Forms.PictureBox();
             this.pbBowInv = new System.Windows.Forms.PictureBox();
             this.pbQuiverInv = new System.Windows.Forms.PictureBox();
-            this.pbShieldInv = new System.Windows.Forms.PictureBox();
+            this.pbMaceInv = new System.Windows.Forms.PictureBox();
             this.tlpStats = new System.Windows.Forms.TableLayoutPanel();
             this.lblPlayer = new System.Windows.Forms.Label();
             this.lblBat = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuiver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGhoul)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRedPotInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBluePotInv)).BeginInit();
@@ -89,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBattleaxeInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBowInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuiverInv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShieldInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaceInv)).BeginInit();
             this.tlpStats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,6 +202,7 @@
             this.pbPlayer.Size = new System.Drawing.Size(30, 30);
             this.pbPlayer.TabIndex = 10;
             this.pbPlayer.TabStop = false;
+            this.pbPlayer.Visible = false;
             // 
             // pbBat
             // 
@@ -213,6 +214,7 @@
             this.pbBat.Size = new System.Drawing.Size(30, 30);
             this.pbBat.TabIndex = 11;
             this.pbBat.TabStop = false;
+            this.pbBat.Visible = false;
             // 
             // pbGhost
             // 
@@ -243,7 +245,7 @@
             this.pbSwordInv.BackColor = System.Drawing.Color.Transparent;
             this.pbSwordInv.BackgroundImage = global::The_Quest.Properties.Resources.swordInv;
             this.pbSwordInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbSwordInv.Location = new System.Drawing.Point(415, 320);
+            this.pbSwordInv.Location = new System.Drawing.Point(79, 320);
             this.pbSwordInv.Name = "pbSwordInv";
             this.pbSwordInv.Size = new System.Drawing.Size(50, 50);
             this.pbSwordInv.TabIndex = 14;
@@ -334,17 +336,17 @@
             this.pbQuiver.TabStop = false;
             this.pbQuiver.Visible = false;
             // 
-            // pbShield
+            // pbMace
             // 
-            this.pbShield.BackColor = System.Drawing.Color.Transparent;
-            this.pbShield.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbShield.BackgroundImage")));
-            this.pbShield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbShield.Location = new System.Drawing.Point(259, 60);
-            this.pbShield.Name = "pbShield";
-            this.pbShield.Size = new System.Drawing.Size(30, 30);
-            this.pbShield.TabIndex = 22;
-            this.pbShield.TabStop = false;
-            this.pbShield.Visible = false;
+            this.pbMace.BackColor = System.Drawing.Color.Transparent;
+            this.pbMace.BackgroundImage = global::The_Quest.Properties.Resources.mace;
+            this.pbMace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbMace.Location = new System.Drawing.Point(259, 60);
+            this.pbMace.Name = "pbMace";
+            this.pbMace.Size = new System.Drawing.Size(30, 30);
+            this.pbMace.TabIndex = 22;
+            this.pbMace.TabStop = false;
+            this.pbMace.Visible = false;
             // 
             // pbGhoul
             // 
@@ -404,6 +406,7 @@
             this.pbBattleaxeInv.Size = new System.Drawing.Size(50, 50);
             this.pbBattleaxeInv.TabIndex = 27;
             this.pbBattleaxeInv.TabStop = false;
+            this.pbBattleaxeInv.Visible = false;
             this.pbBattleaxeInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbBowInv
@@ -423,24 +426,25 @@
             this.pbQuiverInv.BackColor = System.Drawing.Color.Transparent;
             this.pbQuiverInv.BackgroundImage = global::The_Quest.Properties.Resources.quiverInv;
             this.pbQuiverInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbQuiverInv.Location = new System.Drawing.Point(79, 320);
+            this.pbQuiverInv.Location = new System.Drawing.Point(415, 320);
             this.pbQuiverInv.Name = "pbQuiverInv";
             this.pbQuiverInv.Size = new System.Drawing.Size(50, 50);
             this.pbQuiverInv.TabIndex = 29;
             this.pbQuiverInv.TabStop = false;
+            this.pbQuiverInv.Visible = false;
             this.pbQuiverInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
-            // pbShieldInv
+            // pbMaceInv
             // 
-            this.pbShieldInv.BackColor = System.Drawing.Color.Transparent;
-            this.pbShieldInv.BackgroundImage = global::The_Quest.Properties.Resources.shieldInv;
-            this.pbShieldInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbShieldInv.Location = new System.Drawing.Point(471, 320);
-            this.pbShieldInv.Name = "pbShieldInv";
-            this.pbShieldInv.Size = new System.Drawing.Size(50, 50);
-            this.pbShieldInv.TabIndex = 30;
-            this.pbShieldInv.TabStop = false;
-            this.pbShieldInv.Visible = false;
+            this.pbMaceInv.BackColor = System.Drawing.Color.Transparent;
+            this.pbMaceInv.BackgroundImage = global::The_Quest.Properties.Resources.maceInv;
+            this.pbMaceInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbMaceInv.Location = new System.Drawing.Point(471, 320);
+            this.pbMaceInv.Name = "pbMaceInv";
+            this.pbMaceInv.Size = new System.Drawing.Size(50, 50);
+            this.pbMaceInv.TabIndex = 30;
+            this.pbMaceInv.TabStop = false;
+            this.pbMaceInv.Visible = false;
             // 
             // tlpStats
             // 
@@ -555,7 +559,7 @@
             this.ClientSize = new System.Drawing.Size(795, 401);
             this.Controls.Add(this.tlpStats);
             this.Controls.Add(this.pbPlayer);
-            this.Controls.Add(this.pbShieldInv);
+            this.Controls.Add(this.pbMaceInv);
             this.Controls.Add(this.pbQuiverInv);
             this.Controls.Add(this.pbBowInv);
             this.Controls.Add(this.pbBattleaxeInv);
@@ -577,7 +581,7 @@
             this.Controls.Add(this.btnMoveRight);
             this.Controls.Add(this.btnMoveLeft);
             this.Controls.Add(this.btnMoveUp);
-            this.Controls.Add(this.pbShield);
+            this.Controls.Add(this.pbMace);
             this.Controls.Add(this.pbQuiver);
             this.Controls.Add(this.pbSword);
             this.Controls.Add(this.pbBow);
@@ -585,10 +589,13 @@
             this.Controls.Add(this.pbBomb);
             this.Controls.Add(this.pbBluePot);
             this.Controls.Add(this.pbRedPot);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "QuestForm";
             this.Text = "The Quest";
             this.Load += new System.EventHandler(this.QuestForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QuestForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGhost)).EndInit();
@@ -601,7 +608,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuiver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGhoul)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRedPotInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBluePotInv)).EndInit();
@@ -609,7 +616,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBattleaxeInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBowInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuiverInv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShieldInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaceInv)).EndInit();
             this.tlpStats.ResumeLayout(false);
             this.tlpStats.PerformLayout();
             this.ResumeLayout(false);
@@ -641,7 +648,7 @@
         private System.Windows.Forms.PictureBox pbBow;
         private System.Windows.Forms.PictureBox pbSword;
         private System.Windows.Forms.PictureBox pbQuiver;
-        private System.Windows.Forms.PictureBox pbShield;
+        private System.Windows.Forms.PictureBox pbMace;
         private System.Windows.Forms.PictureBox pbGhoul;
         private System.Windows.Forms.PictureBox pbRedPotInv;
         private System.Windows.Forms.PictureBox pbBluePotInv;
@@ -649,7 +656,7 @@
         private System.Windows.Forms.PictureBox pbBattleaxeInv;
         private System.Windows.Forms.PictureBox pbBowInv;
         private System.Windows.Forms.PictureBox pbQuiverInv;
-        private System.Windows.Forms.PictureBox pbShieldInv;
+        private System.Windows.Forms.PictureBox pbMaceInv;
         private System.Windows.Forms.TableLayoutPanel tlpStats;
         private System.Windows.Forms.Label lblPlayer;
         private System.Windows.Forms.Label lblBat;
