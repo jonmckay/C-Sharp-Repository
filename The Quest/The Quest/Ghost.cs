@@ -12,7 +12,16 @@ namespace The_Quest
 
         public override void Move(Random random)
         {
-            throw new NotImplementedException();
+            if (random.Next(0,3) == 1)
+            {
+                this.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+            }
+
+            // If near the player hit them for 3 damage
+            if (this.NearPlayer())
+            {
+                game.HitPlayer(3, random);
+            }
         }
     }
 }

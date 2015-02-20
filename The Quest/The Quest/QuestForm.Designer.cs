@@ -251,6 +251,7 @@
             this.pbSwordInv.TabIndex = 14;
             this.pbSwordInv.TabStop = false;
             this.pbSwordInv.Visible = false;
+            this.pbSwordInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbRedPot
             // 
@@ -371,6 +372,7 @@
             this.pbRedPotInv.TabIndex = 24;
             this.pbRedPotInv.TabStop = false;
             this.pbRedPotInv.Visible = false;
+            this.pbRedPotInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbBluePotInv
             // 
@@ -383,6 +385,7 @@
             this.pbBluePotInv.TabIndex = 25;
             this.pbBluePotInv.TabStop = false;
             this.pbBluePotInv.Visible = false;
+            this.pbBluePotInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbBombInv
             // 
@@ -395,6 +398,7 @@
             this.pbBombInv.TabIndex = 26;
             this.pbBombInv.TabStop = false;
             this.pbBombInv.Visible = false;
+            this.pbBombInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbBattleaxeInv
             // 
@@ -420,6 +424,7 @@
             this.pbBowInv.TabIndex = 28;
             this.pbBowInv.TabStop = false;
             this.pbBowInv.Visible = false;
+            this.pbBowInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // pbQuiverInv
             // 
@@ -445,6 +450,7 @@
             this.pbMaceInv.TabIndex = 30;
             this.pbMaceInv.TabStop = false;
             this.pbMaceInv.Visible = false;
+            this.pbMaceInv.Click += new System.EventHandler(this.InventoryItemClick);
             // 
             // tlpStats
             // 

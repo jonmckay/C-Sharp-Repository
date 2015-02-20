@@ -82,6 +82,36 @@ namespace The_Quest
                 pbBattleaxeInv.BorderStyle = BorderStyle.FixedSingle;
                 game.Equip("Battleaxe");
             }
+            else if (sender == pbSwordInv)
+            {
+                pbSwordInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("Sword");
+            }
+            else if (sender == pbBluePotInv)
+            {
+                pbBluePotInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("BluePotion");
+            }
+            else if (sender == pbRedPotInv)
+            {
+                pbRedPotInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("RedPotion");
+            }
+            else if (sender == pbBombInv)
+            {
+                pbBombInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("Bomb");
+            }
+            else if (sender == pbMaceInv)
+            {
+                pbMaceInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("Mace");
+            }
+            else if (sender == pbBowInv)
+            {
+                pbBowInv.BorderStyle = BorderStyle.FixedSingle;
+                game.Equip("Bow");
+            }
             else if (sender == pbQuiverInv)
             {
                 pbQuiverInv.BorderStyle = BorderStyle.FixedSingle;

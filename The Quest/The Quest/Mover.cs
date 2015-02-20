@@ -22,7 +22,14 @@ namespace The_Quest
 
         public bool Nearby(Point enemyLocation, Point targetLocation, int distance)
         {
-            throw new NotImplementedException();
+            if (Math.Abs(enemyLocation.X - targetLocation.X) < distance && (Math.Abs(enemyLocation.Y - targetLocation.Y) < distance))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool Nearby(Point locationToCheck, int distance )
@@ -39,7 +46,37 @@ namespace The_Quest
 
         public Point Move(Direction direction, Point targetLocation, Rectangle boundaries)
         {
-            throw new NotImplementedException();
+            Point newLocation = targetLocation;
+            switch (direction)
+            {
+                case Direction.Right:
+                    if (newLocation.X + MoveInterval <= boundaries.Right)
+                    {
+                        newLocation.X += MoveInterval;
+                    }
+                    break;
+                case Direction.Left:
+                    if (newLocation.X - MoveInterval >= boundaries.Left)
+                    {
+                        newLocation.X -= MoveInterval;
+                    }
+                    break;
+                case Direction.Up:
+                    if (newLocation.Y - MoveInterval >= boundaries.Top)
+                    {
+                        newLocation.Y -= MoveInterval;
+                    }
+                    break;
+                case Direction.Down:
+                    if (newLocation.Y + MoveInterval <= boundaries.Bottom)
+                    {
+                        newLocation.Y += MoveInterval;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return newLocation;
         }
 
         public Point Move(Direction direction, Rectangle boundaries)

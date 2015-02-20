@@ -12,7 +12,15 @@ namespace The_Quest
 
         public override void Move(Random random)
         {
-            throw new NotImplementedException();
+            if (random.Next(0,3) == 0 || random.Next(0,3) == 1)
+            {
+                this.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+            }
+
+            if (this.NearPlayer())
+            {
+                game.HitPlayer(4, random);
+            }
         }
     }
 }

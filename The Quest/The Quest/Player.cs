@@ -42,13 +42,28 @@ namespace The_Quest
                 {
                     inventory.Add(game.WeaponInRoom);                    
                     game.WeaponInRoom.PickUpWeapon();
+                    if (inventory.Count == 1)
+                    {
+                        game.Equip(game.WeaponInRoom.Name);
+                    }
                 }
             }
         }
 
-        internal void Attack(Direction direction, Random random)
+        public void Attack(Direction direction, Random random)
         {
-            throw new NotImplementedException();
+            // If player has an equipped weapon
+            if (this.equippedWeapon != null)
+            {
+                // Attack with equipped weapon in direction for random amount of damage
+                equippedWeapon.Attack(direction, random);
+
+                // If the weapon is a potion remove it from inventory after using
+                if (equippedWeapon is IPotion)
+                {
+                    inventory.Remove(equippedWeapon);
+                }
+            }
         }
 
         public void Equip(string weaponName)

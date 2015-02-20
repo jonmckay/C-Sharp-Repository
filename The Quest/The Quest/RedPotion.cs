@@ -6,9 +6,17 @@ using System.Drawing;
 
 namespace The_Quest
 {
-    class RedPotion : Weapon
+    class RedPotion : Weapon, IPotion
     {
-        public RedPotion(Game game, Point location) :base(game,location){}
+        private bool used;
+        public bool Used
+        {
+            get { return used; }
+            set { used = value; }
+        }
+        
+
+        public RedPotion(Game game, Point location) : base(game,location){}
 
         public override string Name
         {
@@ -17,7 +25,10 @@ namespace The_Quest
 
         public override void Attack(Direction direction, Random random)
         {
-            throw new NotImplementedException();
+            // Increase the players health by 5 points
+            game.IncreasePlayerHealth(5, random);
+
+            used = true;
         }
     }
 }
