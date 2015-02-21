@@ -14,7 +14,7 @@ namespace The_Quest
         {
             if (random.Next(0,3) == 1)
             {
-                this.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+                location = this.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
             }
 
             // If near the player hit them for 3 damage

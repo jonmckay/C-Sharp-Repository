@@ -15,7 +15,7 @@ namespace The_Quest
             // 50% chance to move towards player
             if (random.Next(0, 2) == 0)
             {
-                this.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
+                location = this.Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
             }
             // 50% chance to move in a random direction
             else

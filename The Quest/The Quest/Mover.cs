@@ -84,18 +84,6 @@ namespace The_Quest
             Point newLocation = location;
             switch (direction)
             {
-                case Direction.Right:
-                    if (newLocation.X + MoveInterval <= boundaries.Right)
-                    {
-                        newLocation.X += MoveInterval;
-                    }
-                    break;
-                case Direction.Left:
-                    if (newLocation.X - MoveInterval >= boundaries.Left)
-                    {
-                        newLocation.X -= MoveInterval;
-                    }
-                    break;
                 case Direction.Up:
                     if (newLocation.Y - MoveInterval >= boundaries.Top)
                     {
@@ -106,6 +94,18 @@ namespace The_Quest
                     if (newLocation.Y + MoveInterval <= boundaries.Bottom)
                     {
                         newLocation.Y += MoveInterval;
+                    }
+                    break;
+                case Direction.Left:
+                    if (newLocation.X - MoveInterval >= boundaries.Left)
+                    {
+                        newLocation.X -= MoveInterval;
+                    }
+                    break;
+                case Direction.Right:
+                    if (newLocation.X + MoveInterval <= boundaries.Right)
+                    {
+                        newLocation.X += MoveInterval;
                     }
                     break;
                 default:
