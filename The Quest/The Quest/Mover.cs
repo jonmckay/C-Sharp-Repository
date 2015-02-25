@@ -22,7 +22,7 @@ namespace The_Quest
 
         public bool Nearby(Point enemyLocation, Point targetLocation, int distance)
         {
-            if (Math.Abs(enemyLocation.X - targetLocation.X) < distance && (Math.Abs(enemyLocation.Y - targetLocation.Y) < distance))
+            if (Math.Abs(targetLocation.X - enemyLocation.X) < distance && (Math.Abs(targetLocation.Y - enemyLocation.Y) < distance))
             {
                 return true;
             }

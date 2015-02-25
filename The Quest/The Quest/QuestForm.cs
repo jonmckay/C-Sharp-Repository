@@ -77,6 +77,23 @@ namespace The_Quest
 
         private void InventoryItemClick(object sender, EventArgs e)
         {
+            // Unequip all items
+            pbMaceInv.BorderStyle = BorderStyle.None;
+            pbSwordInv.BorderStyle = BorderStyle.None;
+            pbBluePotInv.BorderStyle = BorderStyle.None;
+            pbRedPotInv.BorderStyle = BorderStyle.None;
+            pbQuiverInv.BorderStyle = BorderStyle.None;
+            pbBowInv.BorderStyle = BorderStyle.None;
+            pbBattleaxeInv.BorderStyle = BorderStyle.None;
+            pbBombInv.BorderStyle = BorderStyle.None;
+
+            // Enable all attack buttons
+            btnAttackDown.Enabled = true;
+            btnAttackLeft.Enabled = true;
+            btnAttackRight.Enabled = true;
+            btnAttackUp.Enabled = true;
+            btnAttackUp.Text = "Up";
+
             if (sender == pbBattleaxeInv)
             {
                 pbBattleaxeInv.BorderStyle = BorderStyle.FixedSingle;
@@ -89,11 +106,19 @@ namespace The_Quest
             }
             else if (sender == pbBluePotInv)
             {
+                btnAttackDown.Enabled = false;
+                btnAttackLeft.Enabled = false;
+                btnAttackRight.Enabled = false;
+                btnAttackUp.Text = "Drink";
                 pbBluePotInv.BorderStyle = BorderStyle.FixedSingle;
                 game.Equip("BluePotion");
             }
             else if (sender == pbRedPotInv)
             {
+                btnAttackDown.Enabled = false;
+                btnAttackLeft.Enabled = false;
+                btnAttackRight.Enabled = false;
+                btnAttackUp.Text = "Drink";
                 pbRedPotInv.BorderStyle = BorderStyle.FixedSingle;
                 game.Equip("RedPotion");
             }
@@ -129,47 +154,63 @@ namespace The_Quest
             bool showGhost = false;
             bool showGhoul = false;
             int enemiesShown = 0;
-
-            foreach (Enemy enemy in game.Enemies)
+            if (game.Enemies.Count > 0)
             {
-                if (enemy is Bat)
+                foreach (Enemy enemy in game.Enemies)
                 {
-                    pbBat.Location = enemy.Location;
-                    lblBatHitPoints.Text = enemy.HitPoints.ToString();
-                    if (enemy.HitPoints > 0)
+                    if (enemy is Bat)
                     {
-                        showBat = true;
-                        enemiesShown++;
+                        pbBat.Location = enemy.Location;
+                        lblBatHitPoints.Text = enemy.HitPoints.ToString();
+                        if (enemy.HitPoints > 0)
+                        {
+                            showBat = true;
+                            enemiesShown++;
+                        }
+                        if (enemy.Dead)
+                        {
+                            game.Enemies.Remove(enemy);
+                            break;
+                        }
+                    }
+                }
+                foreach (Enemy enemy in game.Enemies)
+                {
+                    if (enemy is Ghost)
+                    {
+                        pbGhost.Location = enemy.Location;
+                        lblGhostHitPoints.Text = enemy.HitPoints.ToString();
+                        if (enemy.HitPoints > 0)
+                        {
+                            showGhost = true;
+                            enemiesShown++;
+                        }
+                        if (enemy.Dead)
+                        {
+                            game.Enemies.Remove(enemy);
+                            break;
+                        }
+                    }
+                }
+                foreach (Enemy enemy in game.Enemies)
+                {
+                    if (enemy is Ghoul)
+                    {
+                        pbGhoul.Location = enemy.Location;
+                        lblGhoulHitPoints.Text = enemy.HitPoints.ToString();
+                        if (enemy.HitPoints > 0)
+                        {
+                            showGhoul = true;
+                            enemiesShown++;
+                        }
+                        if (enemy.Dead)
+                        {
+                            game.Enemies.Remove(enemy);
+                            break;
+                        }
                     }
                 }
             }
-            foreach (Enemy enemy in game.Enemies)
-            {
-                if (enemy is Ghost)
-                {
-                    pbGhost.Location = enemy.Location;
-                    lblGhostHitPoints.Text = enemy.HitPoints.ToString();
-                    if (enemy.HitPoints > 0)
-                    {
-                        showGhost = true;
-                        enemiesShown++;
-                    }
-                }
-            }
-            foreach (Enemy enemy in game.Enemies)
-            {
-                if (enemy is Ghoul)
-                {
-                    pbGhoul.Location = enemy.Location;
-                    lblGhoulHitPoints.Text = enemy.HitPoints.ToString();
-                    if (enemy.HitPoints > 0)
-                    {
-                        showGhoul = true;
-                        enemiesShown++;
-                    }
-                }
-            }
-
             // If an enemy dies set the hit points to zero and stop displaying the picture box
             if (!showBat)
             {
@@ -263,31 +304,31 @@ namespace The_Quest
             {
                 pbSwordInv.Visible = true;
             }
-            else if (game.CheckPlayerInventory("Bow"))
+            if (game.CheckPlayerInventory("Bow"))
             {
                 pbBowInv.Visible = true;
             }
-            else if (game.CheckPlayerInventory("Bomb"))
+            if (game.CheckPlayerInventory("Bomb"))
             {
                 pbBombInv.Visible = true;
             }
-            else if (game.CheckPlayerInventory("RedPotion"))
+            if (game.CheckPlayerInventory("RedPotion"))
             {
                 pbRedPotInv.Visible = true;
             }
-            else if (game.CheckPlayerInventory("BluePotion"))
+            if (game.CheckPlayerInventory("BluePotion"))
             {
                 pbBluePotInv.Visible = true;
             }
-            else if (game.CheckPlayerInventory("Mace"))
+            if (game.CheckPlayerInventory("Mace"))
             {
                 pbMaceInv.Visible = true;
             }
-            else if (game.CheckPlayerInventory("Battleaxe"))
+            if (game.CheckPlayerInventory("Battleaxe"))
             {
                 pbBattleaxeInv.Visible = true;
             }
-            else if (game.CheckPlayerInventory("Quiver"))
+            if (game.CheckPlayerInventory("Quiver"))
             {
                 pbQuiverInv.Visible = true;
             }

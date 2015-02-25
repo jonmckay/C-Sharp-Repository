@@ -30,7 +30,7 @@ namespace The_Quest
         public Player(Game game, Point location)
             : base(game, location)
         {
-            hitPoints = 10;
+            hitPoints = 30;
         }
 
         public void Move(Direction direction)
@@ -61,7 +61,8 @@ namespace The_Quest
                 // If the weapon is a potion remove it from inventory after using
                 if (equippedWeapon is IPotion)
                 {
-                    inventory.Remove(equippedWeapon);
+                    inventory.Remove(equippedWeapon);   //Remove potion from list
+                    equippedWeapon = null;  //Unequip potion
                 }
             }
         }

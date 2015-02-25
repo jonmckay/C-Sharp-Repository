@@ -18,7 +18,7 @@ namespace The_Quest
 
         public override void Attack(Direction direction, Random random)
         {
-            throw new NotImplementedException();
+            DamageEnemy(direction, 30, 1, random);
         }
     }
 }
