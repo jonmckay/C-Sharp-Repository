@@ -33,7 +33,6 @@ namespace The_Quest
             this.boundaries = boundaries;
             player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 70));
         }
-
         /// <summary>
         /// Let the player take a turn, and then let all the enemies move.
         /// When the user clicks one of the four move buttons, the form calls this method
@@ -111,10 +110,14 @@ namespace The_Quest
                     {
                         WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                     }
-                    else
+                    else if (!CheckPlayerInventory("Bow"))
                     {
                         WeaponInRoom = new Bow(this, GetRandomLocation(random));
-                    }                    
+                    }
+                    else
+                    {
+                        WeaponInRoom = null;
+                    }
                     break;
                 case 5:
                     Enemies = new List<Enemy>();
@@ -142,7 +145,6 @@ namespace The_Quest
                         WeaponInRoom = new Mace(this, GetRandomLocation(random));
                     }
                     break;
-                case 8:
                 default:
                     Application.Exit();
                     break;
