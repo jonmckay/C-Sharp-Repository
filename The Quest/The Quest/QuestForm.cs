@@ -380,8 +380,22 @@ namespace The_Quest
                     e.Handled = true;
                     btnMoveDown.PerformClick();
                     break;
+                case Keys.F9:
+                    tbConsole.Visible = true;
+                    tbConsole.Enabled = true;
+                    break;
                 default:
                     break;
+            }
+        }
+
+        private void tbConsole_TextChanged(object sender, EventArgs e)
+        {
+            if (tbConsole.Text == "godmode")
+            {
+                game.IncreasePlayerHealth(1000, random);
+                tbConsole.Enabled = false;
+                tbConsole.Visible = false;
             }
         }
 

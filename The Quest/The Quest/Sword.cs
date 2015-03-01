@@ -19,41 +19,41 @@ namespace The_Quest
         {
             if (direction == Direction.Up)
             {
-                if(!DamageEnemy(direction, 10, 3, random))
+                if(!DamageEnemy(direction, 15, 3, random))
                 {
-                    if(!DamageEnemy(Direction.Right, 10, 3, random))
+                    if(!DamageEnemy(Direction.Right, 15, 3, random))
                     {
-                        DamageEnemy(Direction.Left, 10, 3, random);
+                        DamageEnemy(Direction.Left, 15, 3, random);
                     }
                 }
             }
             else if (direction == Direction.Down)
             {
-                if (!DamageEnemy(direction, 10, 3, random))
+                if (!DamageEnemy(direction, 15, 3, random))
                 {
-                    if (!DamageEnemy(Direction.Left, 10, 3, random))
+                    if (!DamageEnemy(Direction.Left, 15, 3, random))
                     {
-                        DamageEnemy(Direction.Right, 10, 3, random);
+                        DamageEnemy(Direction.Right, 15, 3, random);
                     }
                 }
             }
             if (direction == Direction.Left)
             {
-                if (!DamageEnemy(direction, 10, 3, random))
+                if (!DamageEnemy(direction, 15, 3, random))
                 {
-                    if (!DamageEnemy(Direction.Up, 10, 3, random))
+                    if (!DamageEnemy(Direction.Up, 15, 3, random))
                     {
-                        DamageEnemy(Direction.Down, 10, 3, random);
+                        DamageEnemy(Direction.Down, 15, 3, random);
                     }
                 }
             }
             if (direction == Direction.Right)
             {
-                if (!DamageEnemy(direction, 10, 3, random))
+                if (!DamageEnemy(direction, 15, 3, random))
                 {
-                    if (!DamageEnemy(Direction.Down, 10, 3, random))
+                    if (!DamageEnemy(Direction.Down, 15, 3, random))
                     {
-                        DamageEnemy(Direction.Up, 10, 3, random);
+                        DamageEnemy(Direction.Up, 15, 3, random);
                     }
                 }
             }

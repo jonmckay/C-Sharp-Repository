@@ -69,6 +69,7 @@
             this.lblBatHitPoints = new System.Windows.Forms.Label();
             this.lblGhostHitPoints = new System.Windows.Forms.Label();
             this.lblGhoulHitPoints = new System.Windows.Forms.Label();
+            this.tbConsole = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGhost)).BeginInit();
@@ -556,6 +557,15 @@
             this.lblGhoulHitPoints.TabIndex = 7;
             this.lblGhoulHitPoints.Text = "GhoulHitPoints";
             // 
+            // tbConsole
+            // 
+            this.tbConsole.Location = new System.Drawing.Point(616, 119);
+            this.tbConsole.Name = "tbConsole";
+            this.tbConsole.Size = new System.Drawing.Size(100, 20);
+            this.tbConsole.TabIndex = 32;
+            this.tbConsole.Visible = false;
+            this.tbConsole.TextChanged += new System.EventHandler(this.tbConsole_TextChanged);
+            // 
             // QuestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -563,6 +573,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(795, 401);
+            this.Controls.Add(this.tbConsole);
             this.Controls.Add(this.tlpStats);
             this.Controls.Add(this.pbPlayer);
             this.Controls.Add(this.pbMaceInv);
@@ -672,6 +683,7 @@
         private System.Windows.Forms.Label lblBatHitPoints;
         private System.Windows.Forms.Label lblGhostHitPoints;
         private System.Windows.Forms.Label lblGhoulHitPoints;
+        private System.Windows.Forms.TextBox tbConsole;
     }
 }
 

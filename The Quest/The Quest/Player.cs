@@ -30,7 +30,7 @@ namespace The_Quest
         public Player(Game game, Point location)
             : base(game, location)
         {
-            hitPoints = 30;
+            hitPoints = 10;
         }
 
         public void Move(Direction direction)
