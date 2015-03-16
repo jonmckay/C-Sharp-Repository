@@ -145,6 +145,5 @@ namespace Excuse_Generator_Chapter_9
             currentExcuse.LastUsed = LastUsed.Value;
             UpdateForm(true);
         }
-
     }
 }
