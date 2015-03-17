@@ -32,6 +32,9 @@
             this.btnLoadDeck = new System.Windows.Forms.Button();
             this.btnSaveDeck2 = new System.Windows.Forms.Button();
             this.btnLoadDeck2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCompareFiles = new System.Windows.Forms.Button();
+            this.btnHexDumper = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSaveDeck
@@ -74,11 +77,44 @@
             this.btnLoadDeck2.UseVisualStyleBackColor = true;
             this.btnLoadDeck2.Click += new System.EventHandler(this.btnLoadDeck2_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 128);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCompareFiles
+            // 
+            this.btnCompareFiles.Location = new System.Drawing.Point(12, 157);
+            this.btnCompareFiles.Name = "btnCompareFiles";
+            this.btnCompareFiles.Size = new System.Drawing.Size(127, 23);
+            this.btnCompareFiles.TabIndex = 5;
+            this.btnCompareFiles.Text = "Compare Binary Files";
+            this.btnCompareFiles.UseVisualStyleBackColor = true;
+            this.btnCompareFiles.Click += new System.EventHandler(this.btnCompareFiles_Click);
+            // 
+            // btnHexDumper
+            // 
+            this.btnHexDumper.Location = new System.Drawing.Point(177, 128);
+            this.btnHexDumper.Name = "btnHexDumper";
+            this.btnHexDumper.Size = new System.Drawing.Size(75, 23);
+            this.btnHexDumper.TabIndex = 6;
+            this.btnHexDumper.Text = "Hex Dumper";
+            this.btnHexDumper.UseVisualStyleBackColor = true;
+            this.btnHexDumper.Click += new System.EventHandler(this.btnHexDumper_Click);
+            // 
             // SerializeCardsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnHexDumper);
+            this.Controls.Add(this.btnCompareFiles);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLoadDeck2);
             this.Controls.Add(this.btnSaveDeck2);
             this.Controls.Add(this.btnLoadDeck);
@@ -95,6 +131,9 @@
         private System.Windows.Forms.Button btnLoadDeck;
         private System.Windows.Forms.Button btnSaveDeck2;
         private System.Windows.Forms.Button btnLoadDeck2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCompareFiles;
+        private System.Windows.Forms.Button btnHexDumper;
     }
 }
 
