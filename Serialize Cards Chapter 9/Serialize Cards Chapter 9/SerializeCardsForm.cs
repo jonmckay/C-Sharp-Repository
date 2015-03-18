@@ -137,8 +137,8 @@ namespace Serialize_Cards_Chapter_9
 
         private void btnHexDumper_Click(object sender, EventArgs e)
         {
-            using(StreamReader reader = new StreamReader(@"c:\files\inputFile.txt"))
-            using (StreamWriter writer = new StreamWriter(@"c:\files\outputFile.txt", false))
+            using (StreamReader reader = new StreamReader(@"C:\Users\JMckay\Desktop\GitHub Repositories\C-Sharp-Repository\Serialize Cards Chapter 9\Serialize Cards Chapter 9\bin\Release\three-c.dat"))
+            using (StreamWriter writer = new StreamWriter(@"C:\Users\JMckay\Desktop\GitHub Repositories\C-Sharp-Repository\Serialize Cards Chapter 9\Serialize Cards Chapter 9\bin\Release\outputFile.txt", false))
             {
                 int position = 0;
                 while (!reader.EndOfStream)
