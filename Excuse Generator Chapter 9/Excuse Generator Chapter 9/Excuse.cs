@@ -4,9 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 
 namespace Excuse_Generator_Chapter_9
 {
+    [Serializable]
     class Excuse
     {
         public string Description { get; set; }
@@ -26,30 +29,31 @@ namespace Excuse_Generator_Chapter_9
 
         public Excuse(Random random, string selectedFolder)
         {
-            string[] fileNames = Directory.GetFiles(selectedFolder, "*.txt");
+            string[] fileNames = Directory.GetFiles(selectedFolder, "*.excuse");
             OpenFile(fileNames[random.Next(fileNames.Length)]);
         }
 
         public void OpenFile(string fileName)
         {
             this.ExcusePath = fileName;
-            using (StreamReader sr = new StreamReader(fileName))
+            using (Stream input = File.OpenRead(fileName))
             {
-                this.Description = sr.ReadLine();
-                this.Results = sr.ReadLine();
-                this.LastUsed = Convert.ToDateTime(sr.ReadLine());
+                BinaryFormatter bf = new BinaryFormatter();
+                Excuse excuse = (Excuse)bf.Deserialize(input);
+                Description = excuse.Description;
+                Results = excuse.Results;
+                LastUsed = Convert.ToDateTime(excuse.LastUsed);
             }
         }
-
+        
         public void Save(string fileName)
         {
             this.ExcusePath = fileName;
-            using (StreamWriter sw = new StreamWriter(fileName))
+            using (Stream stream = File.Create(fileName))
             {
-                sw.WriteLine(Description);
-                sw.WriteLine(Results);
-                sw.WriteLine(LastUsed);
-            }
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(stream, this);
+            }            
         }
 
     }

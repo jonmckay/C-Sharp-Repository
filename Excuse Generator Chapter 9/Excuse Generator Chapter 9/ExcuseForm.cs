@@ -54,7 +54,7 @@ namespace Excuse_Generator_Chapter_9
             currentExcuse.Description = tbExcuse.Text;
             currentExcuse.Results = tbResults.Text;
 
-            sfd.Filter = "txt files (*.txt) |*.txt|All files (*.*)|*.*";
+            sfd.Filter = "Excuse files (*.excuse) |*.excuse|All files (*.*)|*.*";
 
             // Open up a save file dialog
             if (sfd.ShowDialog() == DialogResult.OK)
@@ -74,9 +74,9 @@ namespace Excuse_Generator_Chapter_9
                 // Set initial directory
                 ofd.InitialDirectory = selectedFolder;
 
-                ofd.Filter = "Text files (*.txt)|*txt |All Files (*.*)|*.*";
+                ofd.Filter = "Excuse files (*.excuse) |*.excuse|All Files (*.*)|*.*";
 
-                ofd.FileName = tbExcuse.Text + ".txt";
+                ofd.FileName = tbExcuse.Text + ".excuse";
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
