@@ -32,6 +32,7 @@ namespace Excuse_Generator_Chapter_9
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 currentExcuse.ExcusePath = fbd.SelectedPath;
+                selectedFolder = fbd.SelectedPath;
                 btnSave.Enabled = true;
                 btnOpen.Enabled = true;
                 btnRandom.Enabled = true;
@@ -101,10 +102,18 @@ namespace Excuse_Generator_Chapter_9
 
         private void btnRandom_Click(object sender, EventArgs e)
         {
-            if (CheckChanged())
+            string[] fileNames = Directory.GetFiles(selectedFolder, "*.excuse");
+            if (fileNames.Length == 0)
             {
-                currentExcuse = new Excuse(random, selectedFolder);
-                UpdateForm(false);
+                MessageBox.Show("Please specify a folder with excuse files in it", "No excuse files found");
+            }
+            else
+            {
+                if (CheckChanged())
+                {
+                    currentExcuse = new Excuse(random, selectedFolder);
+                    UpdateForm(false);
+                }
             }
         }
 
