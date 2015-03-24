@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -69,9 +70,9 @@ namespace Excuse_Generator_Chapter_9
         private void btnOpen_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+
             if (CheckChanged())
             {
-
                 // Set initial directory
                 ofd.InitialDirectory = selectedFolder;
 
@@ -81,8 +82,34 @@ namespace Excuse_Generator_Chapter_9
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    currentExcuse.OpenFile(ofd.FileName);
-                    UpdateForm(false);
+                    bool clearForm = false;
+                    try
+                    {
+                        currentExcuse = new Excuse(ofd.FileName);
+                        try
+                        {
+                            UpdateForm(false);
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
+                            MessageBox.Show("The excuse file '" + ofd.FileName + "' had some invalid data", "Unable to open the excuse");
+                            clearForm = true;
+                        }
+                    }
+                    catch (SerializationException ex)
+                    {
+                        MessageBox.Show("An error occurred while opening the excuse '" + ofd.FileName + "'\n" + ex.Message, "Unable to open the excuse", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearForm = true;
+                    }
+                    finally
+                    {
+                        if (clearForm)
+                        {
+                            tbExcuse.Text = "";
+                            tbResults.Text = "";
+                            LastUsed.Value = DateTime.Now;
+                        }
+                    }
                 }
             }
         }
@@ -109,9 +136,23 @@ namespace Excuse_Generator_Chapter_9
             }
             else
             {
-                if (CheckChanged())
+                try
                 {
-                    currentExcuse = new Excuse(random, selectedFolder);
+                    if (CheckChanged())
+                    {
+                        currentExcuse = new Excuse(random, selectedFolder);
+                    }
+                }
+                catch (SerializationException)
+                {
+                    currentExcuse = new Excuse();
+                    currentExcuse.Description = "";
+                    currentExcuse.Results = "";
+                    currentExcuse.LastUsed = DateTime.Now;
+                    MessageBox.Show("Your excuse file was invalid.", "Unable to open a random excuse");
+                }
+                finally
+                {
                     UpdateForm(false);
                 }
             }
