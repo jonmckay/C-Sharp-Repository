@@ -8,8 +8,6 @@ namespace Event_Handlers_Chapter_11
 {
     class Bat
     {
-        delegate void BatCallback(BallEventArgs e);
-
         private BatCallback hitBallCallback;
         public Bat(BatCallback callbackDelegate)
         {

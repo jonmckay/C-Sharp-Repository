@@ -25,8 +25,9 @@ namespace Event_Handlers_Chapter_11
 
         private void btnPlayBall_Click(object sender, EventArgs e)
         {
+            Bat bat = ball.GetNewBat();
             BallEventArgs ballEventArgs = new BallEventArgs((int)nudTrajectory.Value, (int)nudDistance.Value);
-            ball.OnBallInPlay(ballEventArgs);
+            bat.HitTheBall(ballEventArgs);
         }
     }
 }
