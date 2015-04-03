@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wack-A-Mole Project Chapter 11", "Wack-A-Mole Project Chapter 11\Wack-A-Mole Project Chapter 11.csproj", "{EDEEB5C8-8736-4078-B8DB-F64C428C3AAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDEEB5C8-8736-4078-B8DB-F64C428C3AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDEEB5C8-8736-4078-B8DB-F64C428C3AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDEEB5C8-8736-4078-B8DB-F64C428C3AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDEEB5C8-8736-4078-B8DB-F64C428C3AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
