@@ -26,7 +26,7 @@ namespace Beehive_Simulator_Chatper_12
 
         public BeeState CurrentState { get; private set; }
 
-        enum BeeState
+        public enum BeeState
         {
             Idle,
             FlyingToFlower,

@@ -38,7 +38,7 @@ namespace Beehive_Simulator_Chatper_12
             locations.Add("Exit", new Point(194, 213));
         }
 
-        private bool AddHoney(double nectar)
+        public bool AddHoney(double nectar)
         {
             // First, we figure out how much honey this nectar can be converted to...
             double honeyToAdd = nectar * NectarHoneyRatio;
@@ -53,7 +53,7 @@ namespace Beehive_Simulator_Chatper_12
             return true;
         }
 
-        private bool ConsumeHoney(double amount)
+        public bool ConsumeHoney(double amount)
         {
             // If there's not enough honey in the hive to meet the demand, we return false;
             if (amount > Honey)

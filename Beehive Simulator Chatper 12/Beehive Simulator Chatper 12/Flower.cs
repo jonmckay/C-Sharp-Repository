@@ -63,7 +63,7 @@ namespace Beehive_Simulator_Chatper_12
             }
         }
 
-        private void Go()
+        public void Go()
         {
             Age++;
             if (Age > lifespan)
