@@ -1,4 +1,4 @@
-﻿namespace Beehive_Simulator_Chatper_12
+﻿namespace Beehive_Simulator_Chapter_12
 {
     partial class BeehiveForm
     {

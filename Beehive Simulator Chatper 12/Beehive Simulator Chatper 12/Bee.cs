@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beehive_Simulator_Chatper_12
+namespace Beehive_Simulator_Chapter_12
 {
     class Bee
     {
@@ -24,19 +24,12 @@ namespace Beehive_Simulator_Chatper_12
         private int ID;
         private Flower destinationFlower;
 
+        private World world;
+        private Hive hive;
+
         public BeeState CurrentState { get; private set; }
 
-        enum BeeState
-        {
-            Idle,
-            FlyingToFlower,
-            GatheringNectar,
-            ReturningToHive,
-            MakingHoney,
-            Retired,
-        }
-
-        public Bee(int id, Point location)
+        public Bee(int id, Point location, Hive hive, World world)
         {
             this.ID = id;
             Age = 0;
@@ -45,6 +38,8 @@ namespace Beehive_Simulator_Chatper_12
             destinationFlower = null;
             NectarCollected = 0;
             CurrentState = BeeState.Idle;
+            this.hive = hive;
+            this.world = world;
         }
 
         public void Go(Random random)

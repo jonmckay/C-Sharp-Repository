@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beehive_Simulator_Chatper_12
+namespace Beehive_Simulator_Chapter_12
 {
     class Hive
     {
@@ -19,14 +19,17 @@ namespace Beehive_Simulator_Chatper_12
         private Dictionary<string, Point> locations;
         private int beeCount;
 
+        private World world;
+
         public double Honey { get; private set; }
 
-        public Hive()
+        public Hive(World world)
         {
             Honey = InitialHoney;
             InitializeLocations();
             Random random = new Random();
             AddBee(random);
+            this.world = world;
         }
 
         private void InitializeLocations()
@@ -77,7 +80,7 @@ namespace Beehive_Simulator_Chatper_12
             int r2 = random.Next(100) - 50;
             Point startPoint = new Point(locations["Nursery"].X + r1, locations["Nursery"].Y + r2);
 
-            Bee newBee = new Bee(beeCount, startPoint);
+            Bee newBee = new Bee(beeCount, startPoint, this, world);
             // Once we have a system, we need to add this bee to the system
         }
 

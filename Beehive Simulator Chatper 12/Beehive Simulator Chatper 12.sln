@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beehive Simulator Chatper 12", "Beehive Simulator Chatper 12\Beehive Simulator Chatper 12.csproj", "{579EE4D2-FD63-4A07-90D8-ED0E2E82D08B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beehive Simulator Chapter 12", "Beehive Simulator Chatper 12\Beehive Simulator Chapter 12.csproj", "{579EE4D2-FD63-4A07-90D8-ED0E2E82D08B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

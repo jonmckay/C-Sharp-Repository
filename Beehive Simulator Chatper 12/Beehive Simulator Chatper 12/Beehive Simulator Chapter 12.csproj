@@ -7,7 +7,7 @@
     <ProjectGuid>{579EE4D2-FD63-4A07-90D8-ED0E2E82D08B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Beehive_Simulator_Chatper_12</RootNamespace>
+    <RootNamespace>Beehive_Simulator_Chapter_12</RootNamespace>
     <AssemblyName>Beehive Simulator Chatper 12</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bee.cs" />
+    <Compile Include="BeeState.cs" />
     <Compile Include="Flower.cs" />
     <Compile Include="BeehiveForm.cs">
       <SubType>Form</SubType>
@@ -64,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

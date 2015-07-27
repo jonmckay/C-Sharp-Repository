@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beehive_Simulator_Chatper_12
+namespace Beehive_Simulator_Chapter_12
 {
     class Flower
     {
@@ -63,7 +63,7 @@ namespace Beehive_Simulator_Chatper_12
             }
         }
 
-        private void Go()
+        public void Go()
         {
             Age++;
             if (Age > lifespan)

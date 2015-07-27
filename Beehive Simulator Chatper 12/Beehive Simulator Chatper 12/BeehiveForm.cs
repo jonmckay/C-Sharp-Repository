@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Beehive_Simulator_Chatper_12
+namespace Beehive_Simulator_Chapter_12
 {
     public partial class BeehiveForm : Form
     {
