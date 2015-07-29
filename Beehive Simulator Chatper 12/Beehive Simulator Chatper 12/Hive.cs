@@ -9,6 +9,9 @@ namespace Beehive_Simulator_Chapter_12
 {
     class Hive
     {
+        /*******************************************
+        * Fields and Properties
+        *******************************************/
         private const int InitialBees = 6;
         private const double InitialHoney = 3.2;
         private const double MaximumHoney = 15.0;
@@ -21,8 +24,11 @@ namespace Beehive_Simulator_Chapter_12
 
         private World world;
 
-        //Test
         public double Honey { get; private set; }
+
+        /*******************************************
+        * Constructors
+        *******************************************/
 
         public Hive(World world)
         {
@@ -32,6 +38,10 @@ namespace Beehive_Simulator_Chapter_12
             AddBee(random);
             this.world = world;
         }
+
+        /*******************************************
+        * Functions
+        *******************************************/
 
         private void InitializeLocations()
         {
@@ -74,15 +84,18 @@ namespace Beehive_Simulator_Chapter_12
 
         private void AddBee(Random random)
         {
-            beeCount++;
+            if (beeCount < MaximumBees)
+            {
+                beeCount++;
 
-            // This creates a point within 50 units in both the X and Y direction from the nursery location
-            int r1 = random.Next(100) - 50;
-            int r2 = random.Next(100) - 50;
-            Point startPoint = new Point(locations["Nursery"].X + r1, locations["Nursery"].Y + r2);
+                // This creates a point within 50 units in both the X and Y direction from the nursery location
+                int r1 = random.Next(100) - 50;
+                int r2 = random.Next(100) - 50;
+                Point startPoint = new Point(locations["Nursery"].X + r1, locations["Nursery"].Y + r2);
 
-            Bee newBee = new Bee(beeCount, startPoint, this, world);
-            // Once we have a system, we need to add this bee to the system
+                Bee newBee = new Bee(beeCount, startPoint, this, world);
+                // Once we have a system, we need to add this bee to the system
+            }
         }
 
         public void Go(Random random)
