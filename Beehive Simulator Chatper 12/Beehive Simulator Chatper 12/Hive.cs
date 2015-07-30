@@ -10,7 +10,7 @@ namespace Beehive_Simulator_Chapter_12
     class Hive
     {
         /*******************************************
-        * Fields and Properties
+        * FIELDS AND PROPERTIES
         *******************************************/
         private const int InitialBees = 6;
         private const double InitialHoney = 3.2;
@@ -26,21 +26,24 @@ namespace Beehive_Simulator_Chapter_12
 
         public double Honey { get; private set; }
 
+        public BeeMessage MessageSender;
+
         /*******************************************
-        * Constructors
+        * CONSTRUCTORS
         *******************************************/
 
-        public Hive(World world)
+        public Hive(World worldObj, BeeMessage MessageSender)
         {
+            this.MessageSender = MessageSender;
+            this.world = worldObj;
             Honey = InitialHoney;
             InitializeLocations();
             Random random = new Random();
             AddBee(random);
-            this.world = world;
         }
 
         /*******************************************
-        * Functions
+        * FUNCTIONS
         *******************************************/
 
         private void InitializeLocations()
@@ -84,8 +87,6 @@ namespace Beehive_Simulator_Chapter_12
 
         private void AddBee(Random random)
         {
-            if (beeCount < MaximumBees)
-            {
                 beeCount++;
 
                 // This creates a point within 50 units in both the X and Y direction from the nursery location
@@ -94,20 +95,21 @@ namespace Beehive_Simulator_Chapter_12
                 Point startPoint = new Point(locations["Nursery"].X + r1, locations["Nursery"].Y + r2);
 
                 Bee newBee = new Bee(beeCount, startPoint, this, world);
-                // Once we have a system, we need to add this bee to the system
-            }
+                newBee.MessageSender += this.MessageSender;
+                // We add the new bee to the world's overall bee list
+                world.Bees.Add(newBee);
         }
 
         public void Go(Random random)
         {
             // If there is enough honey to create a bee you have a 1 in 10 chance of creating a bee
-            if (Honey > MinimumHoneyForCreatingBees && random.Next(10) == 1)
+            if (world.Bees.Count < MaximumBees && Honey > MinimumHoneyForCreatingBees && random.Next(10) == 1)
             {
                 AddBee(random);
             }
         }
 
-        private Point GetLocation(string location)
+        public Point GetLocation(string location)
         {
             if (locations.ContainsKey(location))
             {

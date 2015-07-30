@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace Beehive_Simulator_Chapter_12
@@ -10,7 +7,7 @@ namespace Beehive_Simulator_Chapter_12
     class World
     {
         /*********************************
-        * GLOBAL VARIABLES AND PROPERTIES
+        * FIELDS AND PROPERTIES
         *********************************/
         private const double NectarHarvestedPerNewFlower = 50.0;
         private const int FieldMinX = 15;
@@ -22,16 +19,28 @@ namespace Beehive_Simulator_Chapter_12
         public List<Bee> Bees;
         public List<Flower> Flowers;
 
-        public World()
+        /*********************************
+        * CONSTRUCTORS
+        *********************************/
+
+        public World(BeeMessage messageSender)
         {
             Bees = new List<Bee>();
             Flowers = new List<Flower>();
+
+            // Pass a world reference to hive
+            Hive = new Hive(this, messageSender);
+
             Random random = new Random();
             for (int i = 0; i < 10; i++)
             {
                 AddFlower(random);
             }
         }
+
+        /*********************************
+        * FUNCTIONS
+        *********************************/
 
         public void Go(Random random)
         {

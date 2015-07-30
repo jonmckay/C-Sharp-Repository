@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Beehive_Simulator_Chapter_12
 {
     class Bee
     {
+        /*********************************
+        * FIELDS AND PROPERTIES
+        *********************************/
+
         private const double HoneyConsumed = 0.5;
         private const int MoveRate = 3;
         private const double MinimumFlowerNectar = 1.5;
@@ -29,6 +29,12 @@ namespace Beehive_Simulator_Chapter_12
 
         public BeeState CurrentState { get; private set; }
 
+        public BeeMessage MessageSender;
+
+        /*********************************
+        * CONSTRUCTORS
+        *********************************/
+
         public Bee(int id, Point location, Hive hive, World world)
         {
             this.ID = id;
@@ -42,9 +48,16 @@ namespace Beehive_Simulator_Chapter_12
             this.world = world;
         }
 
+        /*********************************
+        * FUNCTIONS
+        *********************************/
+
         public void Go(Random random)
         {
             Age++;
+
+            BeeState oldState = CurrentState;
+
             switch (CurrentState)
             {
                 case BeeState.Idle:
@@ -52,14 +65,51 @@ namespace Beehive_Simulator_Chapter_12
                     {
                         CurrentState = BeeState.Retired;
                     }
-                    else
+                    // See if there are flowers left, and then consume enough honey to keep going. Otherwise, we're stuck.
+                    else if (world.Flowers.Count > 0 && hive.ConsumeHoney(HoneyConsumed))
                     {
-                        // What do we do if we're idle?
+                        // We need another living flower with nectar.
+                        Flower flower = world.Flowers[random.Next(world.Flowers.Count)];
+
+                        // Assuming that all works out, go to the new flower.
+                        if (flower.Nectar >= MinimumFlowerNectar && flower.Alive)
+                        {
+                            destinationFlower = flower;
+                            CurrentState = BeeState.FlyingToFlower;
+                        }
                     }
                     break;
                 case BeeState.FlyingToFlower:
-                    // move towards the flower we're heading to
-                    break;
+                    {
+                        // Make sure the flower hasn't died as we're heading towards it
+                        if (!world.Flowers.Contains(destinationFlower))
+                        {
+                            CurrentState = BeeState.ReturningToHive;
+                        }
+                        // If we can get to the exit, then we're out of the hive. Update
+                        // our location. Since we're now on the field form, we should fly
+                        // out near the entrance.
+                        else if (InsideHive)
+                        {
+                            if (MoveTowardsLocation(hive.GetLocation("Exit")))
+                            {
+                                InsideHive = false;
+
+                                // This is why we passed a reference to the hive to the Bee constructor
+                                location = hive.GetLocation("Entrance");
+                            }
+                        }
+                        else
+                        {
+                            // If we're out of the hivem and the flower is alive, get to it and start gathering nectar.
+                            if (MoveTowardsLocation(destinationFlower.Location))
+                            {
+                                CurrentState = BeeState.GatheringNectar;
+                            }
+                        }
+
+                        break;
+                    }
                 case BeeState.GatheringNectar:
                     double nectar = destinationFlower.HarvestNectar();
                     if (nectar > 0)
@@ -74,11 +124,20 @@ namespace Beehive_Simulator_Chapter_12
                 case BeeState.ReturningToHive:
                     if (!InsideHive)
                     {
-                        // move towards the hive
+                        // If we've made it to the hive, update our location and the insideHive status
+                        if (MoveTowardsLocation(hive.GetLocation("Entrance")))
+                        {
+                            InsideHive = true;
+                            location = hive.GetLocation("Exit");
+                        }
                     }
                     else
                     {
-                        // what do we do if we're inside the hive?
+                        // If we're already in the hive, head to the honey factory
+                        if (MoveTowardsLocation(hive.GetLocation("HoneyFactory")))
+                        {
+                            CurrentState = BeeState.MakingHoney;
+                        }
                     }
                     break;
                 case BeeState.MakingHoney:
@@ -89,7 +148,19 @@ namespace Beehive_Simulator_Chapter_12
                     }
                     else
                     {
-                        // once we have a Hive, we'll turn the nectar into honey
+                        // Try and give this nectar to the hive.
+                        if (hive.AddHoney(0.5))
+                        {
+                            // If the hive could use the nectar to make honey
+                            // ...remove it from the bee.
+                            NectarCollected -= 0.5;
+                        }
+                        else
+                        {
+                            // If the hive's full, AddHoney() will return false, so the bee just dumps the rest of the nectar
+                            // so he can fly out on another mission.
+                            NectarCollected = 0;
+                        }
                     }
                     break;
                 case BeeState.Retired:
@@ -97,6 +168,11 @@ namespace Beehive_Simulator_Chapter_12
                     break;
                 default:
                     break;
+            }
+
+            if (oldState != CurrentState && MessageSender != null)
+            {
+                MessageSender(ID, CurrentState.ToString());
             }
         }
 
