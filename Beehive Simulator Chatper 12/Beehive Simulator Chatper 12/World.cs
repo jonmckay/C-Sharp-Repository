@@ -4,6 +4,7 @@ using System.Drawing;
 
 namespace Beehive_Simulator_Chapter_12
 {
+    [Serializable]
     class World
     {
         /*********************************

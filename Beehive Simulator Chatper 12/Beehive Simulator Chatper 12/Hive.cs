@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Beehive_Simulator_Chapter_12
 {
+    [Serializable]
     class Hive
     {
         /*******************************************
@@ -26,6 +27,7 @@ namespace Beehive_Simulator_Chapter_12
 
         public double Honey { get; private set; }
 
+        [NonSerialized]
         public BeeMessage MessageSender;
 
         /*******************************************

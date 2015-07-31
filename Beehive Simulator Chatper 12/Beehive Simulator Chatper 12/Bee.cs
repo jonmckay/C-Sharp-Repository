@@ -3,6 +3,7 @@ using System.Drawing;
 
 namespace Beehive_Simulator_Chapter_12
 {
+    [Serializable]
     class Bee
     {
         /*********************************
@@ -29,6 +30,7 @@ namespace Beehive_Simulator_Chapter_12
 
         public BeeState CurrentState { get; private set; }
 
+        [NonSerialized]
         public BeeMessage MessageSender;
 
         /*********************************
