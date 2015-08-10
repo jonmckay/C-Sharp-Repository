@@ -14,6 +14,10 @@ namespace BeeControl_on_a_form
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
+            if (disposing)
+            {
+                animationTimer.Dispose();
+            }
         }
 
         public BeeControl()
