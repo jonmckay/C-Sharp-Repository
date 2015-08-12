@@ -19,6 +19,8 @@ namespace Beehive_Simulator_Chapter_12
         private DateTime end;
         private int framesRun = 0;
         private Random random = new Random();
+        private HiveForm hiveForm;
+        private FieldForm fieldForm;
 
         public BeehiveForm()
         {
@@ -30,6 +32,10 @@ namespace Beehive_Simulator_Chapter_12
             timer1.Tick += new EventHandler(RunFrame);  // We set the handler to our own method, RunFrame()
             timer1.Enabled = false; // Timer starts off
             UpdateStats(new TimeSpan());    // We also start out by updating stats, with a new TimeSpan (0 time elapsed)
+
+            // Show the two forms
+            hiveForm.Show(this);
+            fieldForm.Show(this);
         }
 
         private void RunFrame(object sender, EventArgs e)
