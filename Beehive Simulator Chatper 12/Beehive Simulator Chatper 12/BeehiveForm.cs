@@ -19,29 +19,41 @@ namespace Beehive_Simulator_Chapter_12
         private DateTime end;
         private int framesRun = 0;
         private Random random = new Random();
+
         private HiveForm hiveForm;
         private FieldForm fieldForm;
+        private Renderer renderer;
 
         public BeehiveForm()
         {
             InitializeComponent();
-
-
             world = new World(new BeeMessage(sendMessage));
             timer1.Interval = 50;   // Run every 50 milliseconds
             timer1.Tick += new EventHandler(RunFrame);  // We set the handler to our own method, RunFrame()
             timer1.Enabled = false; // Timer starts off
             UpdateStats(new TimeSpan());    // We also start out by updating stats, with a new TimeSpan (0 time elapsed)
 
+            hiveForm = new HiveForm();
+            fieldForm = new FieldForm();
+
             // Show the two forms
+            MoveChildForms();
             hiveForm.Show(this);
             fieldForm.Show(this);
+            ResetSimulator();
+        }
+
+        private void MoveChildForms()
+        {
+            hiveForm.Location = new Point(Location.X + Width + 10, Location.Y);
+            fieldForm.Location = new Point(Location.X, Location.Y + Math.Max(Height, hiveForm.Height) + 10);
         }
 
         private void RunFrame(object sender, EventArgs e)
         {
             framesRun++;
             world.Go(random);
+            renderer.Render();
             end = DateTime.Now;
             TimeSpan frameDuration = end - start;
             start = end;
@@ -182,6 +194,9 @@ namespace Beehive_Simulator_Chapter_12
             {
                 timer1.Start();
             }
+
+            renderer.Reset();
+            renderer = new Renderer(world, hiveForm, fieldForm);
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
@@ -223,6 +238,18 @@ namespace Beehive_Simulator_Chapter_12
         private void printToolStripButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BeehiveForm_Move(object sender, EventArgs e)
+        {
+            MoveChildForms();
+        }
+
+        private void ResetSimulator()
+        {
+            framesRun = 0;
+            world = new World(new BeeMessage(sendMessage));
+            renderer = new Renderer(world, hiveForm, fieldForm);
         }
     }
 }

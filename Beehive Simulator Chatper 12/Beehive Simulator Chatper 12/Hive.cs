@@ -51,10 +51,10 @@ namespace Beehive_Simulator_Chapter_12
         private void InitializeLocations()
         {
             locations = new Dictionary<string, Point>();
-            locations.Add("Entrance", new Point(600, 100));
-            locations.Add("Nursery", new Point(95, 174));
-            locations.Add("HoneyFactory", new Point(157, 98));
-            locations.Add("Exit", new Point(194, 213));
+            locations.Add("Entrance", new Point(57, 63));
+            locations.Add("Nursery", new Point(212, 470));
+            locations.Add("HoneyFactory", new Point(412, 242));
+            locations.Add("Exit", new Point(461, 579));
         }
 
         public bool AddHoney(double nectar)
