@@ -1,6 +1,6 @@
-﻿namespace Beehive_Simulator_Chapter_12
+﻿namespace Graphics_Testing_Program_Chapter_13
 {
-    partial class HiveForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // HiveForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(612, 701);
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "HiveForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "HiveForm";
+            this.ClientSize = new System.Drawing.Size(561, 274);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Click += new System.EventHandler(this.Form1_Click);
             this.ResumeLayout(false);
 
         }
@@ -49,3 +45,4 @@
         #endregion
     }
 }
+

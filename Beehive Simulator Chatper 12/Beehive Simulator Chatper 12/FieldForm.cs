@@ -16,6 +16,5 @@ namespace Beehive_Simulator_Chapter_12
         {
             InitializeComponent();
         }
-
     }
 }

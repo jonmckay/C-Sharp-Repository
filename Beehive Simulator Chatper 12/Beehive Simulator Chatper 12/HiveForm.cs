@@ -15,6 +15,7 @@ namespace Beehive_Simulator_Chapter_12
         public HiveForm()
         {
             InitializeComponent();
+            BackgroundImage = Renderer.ResizeImage (Properties.Resources.Hive__inside_, ClientRectangle.Width, ClientRectangle.Height);
         }
 
     }

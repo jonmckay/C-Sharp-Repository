@@ -11,6 +11,16 @@ namespace Beehive_Simulator_Chapter_12
     class BeeControl : PictureBox
     {
         private Timer animationTimer = new Timer();
+        private Bitmap[] cells = new Bitmap[4];
+
+        private void ResizeCells()
+        {
+            cells[0] = Renderer.ResizeImage(Properties.Resources.Bee_animation_1, Width, Height);
+            cells[1] = Renderer.ResizeImage(Properties.Resources.Bee_animation_2, Width, Height);
+            cells[2] = Renderer.ResizeImage(Properties.Resources.Bee_animation_3, Width, Height);
+            cells[3] = Renderer.ResizeImage(Properties.Resources.Bee_animation_4, Width, Height);
+        }
+
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
@@ -27,6 +37,7 @@ namespace Beehive_Simulator_Chapter_12
             animationTimer.Start();
             BackColor = Color.Transparent;
             BackgroundImageLayout = ImageLayout.Stretch;
+            ResizeCells();
         }
 
         private int cell = 0;
@@ -35,13 +46,32 @@ namespace Beehive_Simulator_Chapter_12
             cell++;
             switch (cell)
             {
-                case 1: BackgroundImage = Properties.Resources.Bee_animation_1; break;
-                case 2: BackgroundImage = Properties.Resources.Bee_animation_2; break;
-                case 3: BackgroundImage = Properties.Resources.Bee_animation_3; break;
-                case 4: BackgroundImage = Properties.Resources.Bee_animation_4; break;
-                default: BackgroundImage = Properties.Resources.Bee_animation_2; 
+                case 1: BackgroundImage = cells[0]; break;
+                case 2: BackgroundImage = cells[1]; break;
+                case 3: BackgroundImage = cells[2]; break;
+                case 4: BackgroundImage = cells[3]; break;
+                case 5: BackgroundImage = cells[2]; break;
+                default: BackgroundImage = cells[1];
                 cell = 0; break;
             }
+        }
+
+        private void InitializeComponent()
+        {
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // BeeControl
+            // 
+            this.Resize += new System.EventHandler(this.BeeControl_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        private void BeeControl_Resize(object sender, EventArgs e)
+        {
+            ResizeCells();
         }
     }
 }
