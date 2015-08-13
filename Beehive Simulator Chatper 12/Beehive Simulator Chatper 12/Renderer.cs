@@ -23,12 +23,20 @@ namespace Beehive_Simulator_Chapter_12
 
         private List<Bee> retiredBees = new List<Bee>();
 
+        /*************************************
+        * CONSTRUCTORS
+        *************************************/
+
         public Renderer(World world, HiveForm hiveForm, FieldForm fieldForm)
         {
             this.world = world;
             this.hiveForm = hiveForm;
             this.fieldForm = fieldForm;
         }
+
+        /*************************************
+        * FUNCTIONS
+        *************************************/
 
         public static Bitmap ResizeImage(Bitmap picture, int width, int height)
         {
