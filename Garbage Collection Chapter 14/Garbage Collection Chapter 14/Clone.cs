@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Garbage_Collection_Chapter_14
 {
+    [Serializable]
     class Clone : IDisposable
     {
         public int Id { get; private set; }
@@ -18,7 +21,18 @@ namespace Garbage_Collection_Chapter_14
 
         public void Dispose()
         {
-            MessageBox.Show("I've been disposed!", "Clone #" + Id + " says...");
+            string filename = @"C:\Temp\Clone.dat";
+            string dirname = @"C:\Temp";
+            if (File.Exists(filename) == false)
+            {
+                Directory.CreateDirectory(dirname);
+            }
+            BinaryFormatter bf = new BinaryFormatter();
+            using (Stream output = File.OpenWrite(filename))
+            {
+                bf.Serialize(output, this);
+            }
+            MessageBox.Show("Must...serialize...object!", "Clone #" + Id + " says...");
         }
 
         ~Clone()
