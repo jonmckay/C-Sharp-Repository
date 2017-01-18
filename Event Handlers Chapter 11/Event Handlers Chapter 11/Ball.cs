@@ -11,11 +11,7 @@ namespace Event_Handlers_Chapter_11
         public event EventHandler<BallEventArgs> BallInPlay;
         protected void OnBallInPlay(BallEventArgs e)
         {
-            EventHandler<BallEventArgs> ballInPlay = BallInPlay;
-            if (ballInPlay != null)
-            {
-                ballInPlay(this, e);
-            }
+            BallInPlay?.Invoke(this, e);
         }
 
         public Bat GetNewBat()
